@@ -1,0 +1,18 @@
+.custom_btn {
+  font-size: 18px;
+  font-weight: bold;
+  text-align: center;
+  color: white;
+  background-color: var(--green);
+  padding: 12px 16px;
+  border-radius: 50px;
+  box-shadow: 0 4px #197024;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  transition: all 0.5s;
+  &:active {
+    transform: translateY(2px);
+    box-shadow: none;
+  }
+}
