@@ -41,6 +41,7 @@
   --yellow: #ffcb08;
   --green: #27ac38;
   --blue: #2f80ed;
+  --orange: #ff9600;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -88,10 +89,12 @@
 html,
 body {
   max-width: 100vw;
-  overflow-x: hidden;
 }
 
 body {
+  width: 100vw;
+  height: 100vh;
+  overflow-x: hidden;
   color: rgb(var(--background-start-rgb));
   background: rgb(var(--foreground-rgb));
 }
@@ -105,4 +108,26 @@ a {
   html {
     color-scheme: dark;
   }
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px grey; 
+  border-radius: 10px;
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #c1c1c1; 
+  border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #979797; 
 }
