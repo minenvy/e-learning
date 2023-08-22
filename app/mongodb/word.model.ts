@@ -5,19 +5,25 @@ const wordSchema = new mongoose.Schema({
     type: String,
     required: true
   },
-  vieVersion: {
-    type: String,
-    required: true
-  },
   type: {
     type: String,
     required: true
   },
+  explainMeaning: {
+    type: String
+  },
   example: {
+    type: String
+  },
+  synonym: {
     type: String
   },
   image: {
     type: String
+  },
+  vieVersion: {
+    type: String,
+    required: true
   },
   level: {
     type: Number,

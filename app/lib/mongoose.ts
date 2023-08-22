@@ -18,6 +18,6 @@ export async function connectToDb() {
     isConnected = true
     console.log('Database connect successful!')
   } catch (error) {
-    console.log(error)
+    console.log(`Fail to connect database: ${error}`)
   }
 }

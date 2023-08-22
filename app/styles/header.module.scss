@@ -1,10 +1,36 @@
 .wrapper {
-  height: 82px;
-  padding: 16px 24px;
+  height: 56px;
+  padding: 0 16px;
   display: flex;
   justify-content: space-between;
 }
 
-.round_image {
-  border-radius: 10px;
+.side_boundary {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+
+  img {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    margin: 0 8px;
+    cursor: pointer;
+  }
+
+  .logo {
+    width: 28px;
+  }
+
+  .avatar {
+    border: 2px solid var(--orange);
+  }
+
+  p {
+    font-size: 24px;
+  }
+
+  .app_name {
+    color: var(--orange);
+  }
 }

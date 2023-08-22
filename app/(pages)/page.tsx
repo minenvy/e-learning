@@ -1,5 +1,5 @@
 import styles from '@/app/styles/home.module.scss'
-import Button from '@/app/components/ui/button'
+import Button from '@/app/components/ui/Button'
 import Link from 'next/link'
 
 function Home() {
@@ -22,7 +22,7 @@ function Home() {
 				<div className={styles.paragraph}>
 					<p className={styles.text}>Ghi chép và ôn tập Tiếng Anh</p>
 					<Button>
-						<Link href="/review">Bắt đầu ngay</Link>
+						<Link href="/general">Bắt đầu ngay</Link>
 					</Button>
 				</div>
 			</section>
