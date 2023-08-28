@@ -34,7 +34,6 @@ export default function SignIn() {
       password,
       redirect: false,
     })
-    console.log(res)
     if (res?.error) {
       message.warning(errorMessage)
     } else {
