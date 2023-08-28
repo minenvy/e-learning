@@ -1,4 +1,4 @@
-import { addUser, getUserByUsername } from "@/app/lib/actions/user.actions"
+import { addUserFromCredentials, getUserByUsername } from "@/app/lib/actions/user.actions"
 import { NextResponse, NextRequest } from "next/server"
 
 const errorMessage = 'Tài khoản đã tồn tại'
@@ -18,7 +18,7 @@ export async function POST(req: NextRequest) {
     status: errorStatus,
   })
 
-  await addUser({ username, password })
+  await addUserFromCredentials({ username, password })
 
   return NextResponse.json({
     user: { username, password },

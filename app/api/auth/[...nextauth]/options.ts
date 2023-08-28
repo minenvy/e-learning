@@ -1,8 +1,15 @@
 import { NextAuthOptions } from 'next-auth'
 import GoogleProvider from 'next-auth/providers/google'
 import CredentialsProvider from 'next-auth/providers/credentials'
-import { getUserByUsername } from '@/app/lib/actions/user.actions'
-import bcrypt from 'bcrypt'
+import { addUserFromGoogle, getUserByUsername } from '@/app/lib/actions/user.actions'
+import * as bcrypt from 'bcrypt'
+import User from '@/app/interfaces/user'
+
+type GoogleUser = {
+  name: string
+  email: string
+  image: string
+}
 
 export const authOptions: NextAuthOptions = {
   session: {
@@ -21,14 +28,13 @@ export const authOptions: NextAuthOptions = {
         password: { label: 'Password', type: 'password' },
       },
       async authorize(credentials) {
-        const user = await getUserByUsername(credentials?.username as string)
+        if (credentials === undefined) return null
+
+        const user = await getUserByUsername(credentials.username)
 
         if (
-          !user ||
-          !(await bcrypt.compare(
-            credentials?.password as string,
-            user?.password as string
-          ))
+          user === null ||
+          !(await bcrypt.compare(credentials.password, user.password as string))
         )
           return null
 
@@ -36,6 +42,41 @@ export const authOptions: NextAuthOptions = {
       },
     }),
   ],
+  callbacks: {
+    async signIn({ user, account }) {
+      if (account && account.provider === 'google') {
+        const { name, email, image } = user as GoogleUser
+        const username = email
+
+        const userInfo = await getUserByUsername(username)
+
+        if (userInfo === null) {
+          await addUserFromGoogle({ name, username, image })
+        }
+      }
+
+      return Promise.resolve(true)
+    },
+    async jwt({ token, account, user }) {
+      // Persist the OAuth access_token and or the user id to the token right after signin
+      if (account) {
+        token.accessToken = account.access_token
+        token.name = user.name
+        token.username = user.username
+        token.password = user?.password
+        token.image = user?.image
+        token.onboarding = user.onboarding
+      }
+      return token
+    },
+    async session({ session, token }) {
+      // Send properties to the client, like an access_token and user id from a provider.
+      session.accessToken = token.accessToken
+      session.user = token
+      
+      return session
+    }
+  },
   pages: {
     signIn: '/auth/sign-in',
   },
