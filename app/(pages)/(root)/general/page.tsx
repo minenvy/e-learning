@@ -1,10 +1,15 @@
+'use client'
+
 import Achievement from '@/app/components/shared/Achievement'
 import WordChart from '@/app/components/shared/WordChart'
 import styles from '@/app/styles/general.module.scss'
+import { useSession } from "next-auth/react"
 
 export default function General() {
-	const data = [20, 30, 25, 55, 15]
-	const max = Math.max(...data)
+  const { data } = useSession()
+  console.log(data)
+	const word = [20, 30, 25, 55, 15]
+	const max = Math.max(...word)
 
 	return (
 		<main className={styles.wrapper}>
