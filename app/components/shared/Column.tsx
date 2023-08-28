@@ -1,4 +1,7 @@
+'use client'
+
 import styles from '@/app/styles/column.module.scss'
+import { useEffect, useState } from 'react'
 
 const parentHeight = 300
 
@@ -15,8 +18,13 @@ export default function Column({
 	title,
 	backgroundColor,
 }: Props) {
-	const height = parentHeight * percent
+  const [height, setHeight] = useState(0)
+	const transformedHeight = parentHeight * percent
 	const marginTop = parentHeight - height
+
+  useEffect(() => {
+    setHeight(transformedHeight)
+  }, [])
 
 	return (
 		<div className={styles.wrapper}>

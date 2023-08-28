@@ -25,10 +25,6 @@ const wordSchema = new mongoose.Schema({
     type: String,
     required: true
   },
-  level: {
-    type: Number,
-    required: true
-  },
   createdAt: {
     type: Date,
     default: Date.now

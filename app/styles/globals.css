@@ -104,6 +104,27 @@ a {
   text-decoration: none;
 }
 
+input {
+  outline: none;
+  border: none
+}
+
+input::-webkit-input-placeholder {
+  color: #adadad;
+}
+
+input:-moz-placeholder {
+  color: #adadad;
+}
+
+input::-moz-placeholder {
+  color: #adadad;
+}
+
+input:-ms-input-placeholder {
+  color: #adadad;
+}
+
 @media (prefers-color-scheme: dark) {
   html {
     color-scheme: dark;

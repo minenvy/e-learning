@@ -2,7 +2,7 @@ import styles from '@/app/styles/home.module.scss'
 import Button from '@/app/components/ui/Button'
 import Link from 'next/link'
 
-function Home() {
+export default function Home() {
 	return (
 		<main className={styles.wrapper}>
 			<img src="/images/logo.svg" alt="logo" className={styles.logo} />
@@ -29,5 +29,3 @@ function Home() {
 		</main>
 	)
 }
-
-export default Home
