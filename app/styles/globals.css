@@ -42,6 +42,7 @@
   --green: #27ac38;
   --blue: #2f80ed;
   --orange: #ff9600;
+  --grey: #e0e0e0;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -106,7 +107,7 @@ a {
 
 input {
   outline: none;
-  border: none
+  border: none;
 }
 
 input::-webkit-input-placeholder {
@@ -138,17 +139,17 @@ input:-ms-input-placeholder {
 
 /* Track */
 ::-webkit-scrollbar-track {
-  box-shadow: inset 0 0 5px grey; 
+  box-shadow: inset 0 0 5px grey;
   border-radius: 10px;
 }
- 
+
 /* Handle */
 ::-webkit-scrollbar-thumb {
-  background: #c1c1c1; 
+  background: #c1c1c1;
   border-radius: 10px;
 }
 
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
-  background: #979797; 
+  background: #979797;
 }

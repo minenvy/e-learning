@@ -9,10 +9,10 @@ import Form from '@/app/components/ui/auth/Form'
 import Title from '@/app/components/ui/auth/Title'
 import Button from '@/app/components/ui/auth/Button'
 import GoogleButton from '@/app/components/ui/auth/GoogleButton'
-import { Divider, message } from 'antd'
+import { Divider, Spin, message } from 'antd'
 import { useRouter } from 'next/navigation'
 
-const callbackUrl = '/general'
+const callbackUrl = '/protected/general'
 const signUpUrl = '/auth/sign-up'
 const errorMessage = 'Tài khoản hoặc mật khẩu không chính xác'
 
@@ -21,6 +21,7 @@ export default function SignIn() {
 
   const [username, setUsername] = useState('')
   const [password, setPassword] = useState('')
+  const [isLoading, setIsLoading] = useState(false)
 
   const changeUsername = (e: React.ChangeEvent<HTMLInputElement>) => {
     setUsername(e.target.value)
@@ -29,11 +30,17 @@ export default function SignIn() {
     setPassword(e.target.value)
   }
   const signInWithCredentials = async () => {
+    if (isLoading) return
+    setIsLoading(true)
+
     const res = await signIn('credentials', {
       username,
       password,
       redirect: false,
     })
+
+    setIsLoading(false)
+
     if (res?.error) {
       message.warning(errorMessage)
     } else {
@@ -41,9 +48,14 @@ export default function SignIn() {
     }
   }
   const signInWithGoogle = async () => {
+    if (isLoading) return
+    setIsLoading(true)
+
     await signIn('google', {
       callbackUrl,
     })
+
+    setIsLoading(false)
   }
 
   return (
@@ -70,7 +82,7 @@ export default function SignIn() {
         onChange={changePassword}
       />
       <Button type="button" onClick={signInWithCredentials}>
-        Đăng nhập
+        {isLoading ? <Spin /> : 'Đăng nhập'}
       </Button>
       <SignUp>
         <p>Bạn chưa có tài khoản?</p>
