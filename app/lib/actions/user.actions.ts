@@ -13,10 +13,7 @@ export async function getUserByUsername(
 export async function addUserFromCredentials(user: User) {
   await connectToDb()
   const hashedUser = user
-  const hashedPassword = await bcrypt.hash(
-    hashedUser.password as string,
-    12
-  )
+  const hashedPassword = await bcrypt.hash(hashedUser.password as string, 12)
   hashedUser.password = hashedPassword
   const newUser = new UserModel(hashedUser)
   await newUser.save()
@@ -24,6 +21,14 @@ export async function addUserFromCredentials(user: User) {
 
 export async function addUserFromGoogle(user: User) {
   await connectToDb()
-  const newUser = new UserModel({ ...user, onboarding: true })
+  const newUser = new UserModel(user)
   await newUser.save()
+}
+
+export async function updateUserInfo(user: User) {
+  await connectToDb()
+  UserModel.findOneAndUpdate(
+    { username: user.username },
+    { ...user, onboarding: true }
+  )
 }

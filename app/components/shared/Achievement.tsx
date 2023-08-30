@@ -5,7 +5,7 @@ import MediumBox from '@/app/components/ui/MediumBox'
 export default function Achievement() {
   return (
     <div className={styles.achievement}>
-      <div style={true && {filter: 'grayscale(1)'}}>
+      <div style={true && { filter: 'grayscale(1)' }}>
         <TinyBox
           icon="/images/achievement_word.png"
           title="So tay"
@@ -13,10 +13,10 @@ export default function Achievement() {
         />
       </div>
       <MediumBox
-          icon="/images/achievement_word.png"
-          title="So tay"
-          description="Ban da hoc lien tuc 7 ngay"
-        />
+        icon="/images/achievement_word.png"
+        title="So tay"
+        description="Ban da hoc lien tuc 7 ngay"
+      />
     </div>
   )
 }
