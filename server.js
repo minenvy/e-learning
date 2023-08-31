@@ -23,8 +23,7 @@ app.prepare().then(() => {
         console.error('Error reading file:', err)
         return res.status(404).end()
       }
-      res.sendFile(data)
-      // res.end(data)
+      return res.end(data)
     })
   })
 
