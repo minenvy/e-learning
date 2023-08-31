@@ -1,6 +1,6 @@
 'use client'
 
-import styles from '@/app/styles/word_column.module.scss'
+import styles from '@/app/styles/word-column.module.scss'
 import { useEffect, useState } from 'react'
 
 const parentHeight = 300

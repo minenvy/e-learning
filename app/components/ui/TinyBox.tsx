@@ -1,4 +1,4 @@
-import styles from '@/app/styles/tiny_box.module.scss'
+import styles from '@/app/styles/tiny-box.module.scss'
 
 type Props = {
   icon: string

@@ -5,7 +5,7 @@ import MediumBox from '@/app/components/ui/MediumBox'
 export default function Achievement() {
   return (
     <div className={styles.achievement}>
-      <div style={true && { filter: 'grayscale(1)' }}>
+      <div style={false ? { filter: 'grayscale(1)' } : {}}>
         <TinyBox
           icon="/images/achievement_word.png"
           title="So tay"

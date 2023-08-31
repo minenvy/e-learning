@@ -1,5 +1,5 @@
 import WordColumn from '@/app/components/shared/WordColumn'
-import styles from '@/app/styles/general.module.scss'
+import styles from '@/app/styles/word-chart.module.scss'
 import Button from '@/app/components/ui/Button'
 import Link from 'next/link'
 
