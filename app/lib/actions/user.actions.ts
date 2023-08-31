@@ -29,6 +29,6 @@ export async function updateUserInfo(user: User) {
   await connectToDb()
   UserModel.findOneAndUpdate(
     { username: user.username },
-    { ...user, onboarding: true }
+    user
   )
 }

@@ -1,8 +1,8 @@
 import '@/app/styles/globals.css'
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
-import NextAuthProvider from '@/app/providers/NextAuthProvider'
 import StyledComponentsRegistry from '@/app/providers/StyledComponentsProvider'
+import { ClerkProvider } from '@clerk/nextjs'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -17,12 +17,12 @@ type Props = {
 
 export default function RootLayout({ children }: Props) {
   return (
-    <html lang="en">
-      <body className={inter.className}>
-        <StyledComponentsRegistry>
-          <NextAuthProvider>{children}</NextAuthProvider>
-        </StyledComponentsRegistry>
-      </body>
-    </html>
+    <ClerkProvider>
+      <html lang="en">
+        <body className={inter.className}>
+          <StyledComponentsRegistry>{children}</StyledComponentsRegistry>
+        </body>
+      </html>
+    </ClerkProvider>
   )
 }

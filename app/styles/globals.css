@@ -38,7 +38,7 @@
   --card-border-rgb: 131, 134, 135;
 
   --red: #ff0808;
-  --yellow: #ffcb08;
+  --yellow: #ffd53c;
   --green: #27ac38;
   --blue: #2f80ed;
   --orange: #ff9600;
@@ -124,6 +124,14 @@ input::-moz-placeholder {
 
 input:-ms-input-placeholder {
   color: #adadad;
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+  -webkit-text-fill-color: black !important;
+  -webkit-box-shadow: 0 0 0 30px white inset !important;
 }
 
 @media (prefers-color-scheme: dark) {

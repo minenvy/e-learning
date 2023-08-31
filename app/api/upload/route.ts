@@ -1,8 +1,8 @@
 import fs, { createReadStream, createWriteStream } from 'fs'
 import { NextRequest, NextResponse } from 'next/server'
 
-const uploadFolder = '/upload/'
-const uploadDir = '/public/upload/'
+const uploadFolder = '/uploads/'
+const uploadDir = '/public/uploads/'
 const uploadPath = process.cwd() + uploadDir
 
 function checkUploadFolder() {
