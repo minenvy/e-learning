@@ -4,7 +4,7 @@ import Link from "next/link"
 
 const signInUrl = "/sign-in"
 
-function Header() {
+export default function Header() {
   return (
     <header className={styles.wrapper}>
       <div className={styles.side_boundary}>
@@ -19,5 +19,3 @@ function Header() {
     </header>
   )
 }
-
-export default Header
