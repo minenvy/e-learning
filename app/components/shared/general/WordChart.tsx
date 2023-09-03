@@ -1,4 +1,4 @@
-import WordColumn from "@/app/components/shared/WordColumn"
+import WordColumn from "@/app/components/shared/general/WordColumn"
 import styles from "@/app/styles/word-chart.module.scss"
 import Button from "@/app/components/ui/Button"
 import Link from "next/link"
