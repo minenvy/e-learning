@@ -6,11 +6,7 @@ type Props = {
   ratio: number
 }
 
-export default function FractionLayout({
-  bigPart,
-  smallPart,
-  ratio,
-}: Props) {
+export default function FractionLayout({ bigPart, smallPart, ratio }: Props) {
   return (
     <main className={styles.wrapper}>
       <div className={styles.big} style={{ flex: ratio }}>
