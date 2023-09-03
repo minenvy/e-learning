@@ -1,7 +1,7 @@
-import { sidebarLinks } from '@/app/constants/sidebar'
-import { usePathname } from 'next/navigation'
-import styles from '@/app/styles/sidebar.module.scss'
-import Link from 'next/link'
+import { sidebarLinks } from "@/app/constants/sidebar"
+import { usePathname } from "next/navigation"
+import styles from "@/app/styles/sidebar.module.scss"
+import Link from "next/link"
 
 export default function Sidebar() {
   const pathname = usePathname()

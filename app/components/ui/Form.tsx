@@ -1,6 +1,6 @@
-'use client'
+"use client"
 
-import { styled } from 'styled-components'
+import { styled } from "styled-components"
 
 type Props = {
   children: React.ReactNode
@@ -19,7 +19,7 @@ export default function Form({ children }: Props) {
 const Wrapper = styled.div`
   width: 100vw;
   min-height: 100vh;
-  background-image: url('/images/background.jpg');
+  background-image: url("/images/background.jpg");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;

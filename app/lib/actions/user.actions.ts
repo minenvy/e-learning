@@ -1,10 +1,10 @@
-import User from '@/app/interfaces/user'
-import { connectToDb } from '@/app/lib/mongoose'
-import UserModel from '@/app/mongodb/user.model'
-import bcrypt from 'bcrypt'
+import User from "@/app/interfaces/user"
+import { connectToDb } from "@/app/lib/mongoose"
+import UserModel from "@/app/mongodb/user.model"
+import bcrypt from "bcrypt"
 
 export async function getUserByUsername(
-  username: string
+  username: string,
 ): Promise<User | null> {
   await connectToDb()
   return await UserModel.findOne({ username })
@@ -27,8 +27,5 @@ export async function addUserFromGoogle(user: User) {
 
 export async function updateUserInfo(user: User) {
   await connectToDb()
-  UserModel.findOneAndUpdate(
-    { username: user.username },
-    user
-  )
+  UserModel.findOneAndUpdate({ username: user.username }, user)
 }

@@ -1,8 +1,8 @@
-import styles from '@/app/styles/header.module.scss'
-import { UserButton } from '@clerk/nextjs'
-import Link from 'next/link'
+import styles from "@/app/styles/header.module.scss"
+import { UserButton } from "@clerk/nextjs"
+import Link from "next/link"
 
-const signInUrl = '/sign-in'
+const signInUrl = "/sign-in"
 
 function Header() {
   return (

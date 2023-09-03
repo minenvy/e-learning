@@ -1,11 +1,11 @@
-import styles from '@/app/styles/general.module.scss'
-import TinyBox from '@/app/components/ui/TinyBox'
-import MediumBox from '@/app/components/ui/MediumBox'
+import styles from "@/app/styles/general.module.scss"
+import TinyBox from "@/app/components/ui/TinyBox"
+import MediumBox from "@/app/components/ui/MediumBox"
 
 export default function Achievement() {
   return (
     <div className={styles.achievement}>
-      <div style={false ? { filter: 'grayscale(1)' } : {}}>
+      <div style={false ? { filter: "grayscale(1)" } : {}}>
         <TinyBox
           icon="/images/achievement_word.png"
           title="So tay"

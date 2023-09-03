@@ -1,4 +1,4 @@
-import Compressor from 'compressorjs'
+import Compressor from "compressorjs"
 
 export async function compressImage(file: File): Promise<File> {
   return new Promise<File>((resolve, reject) => {

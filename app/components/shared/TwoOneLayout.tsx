@@ -1,4 +1,4 @@
-import styles from '@/app/styles/two-one-layout.module.scss'
+import styles from "@/app/styles/two-one-layout.module.scss"
 
 type Props = {
   bigContent: React.ReactNode

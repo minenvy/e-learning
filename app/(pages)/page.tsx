@@ -1,8 +1,8 @@
-import styles from '@/app/styles/home.module.scss'
-import Button from '@/app/components/ui/Button'
-import Link from 'next/link'
+import styles from "@/app/styles/home.module.scss"
+import Button from "@/app/components/ui/Button"
+import Link from "next/link"
 
-const redirectUrl = '/general'
+const redirectUrl = "/general"
 
 export default function Home() {
   return (

@@ -1,8 +1,8 @@
-import fs, { createReadStream, createWriteStream } from 'fs'
-import { NextRequest, NextResponse } from 'next/server'
+import fs, { createReadStream, createWriteStream } from "fs"
+import { NextRequest, NextResponse } from "next/server"
 
-const uploadFolder = '/uploads/'
-const uploadDir = '/public/uploads/'
+const uploadFolder = "/uploads/"
+const uploadDir = "/public/uploads/"
 const uploadPath = process.cwd() + uploadDir
 
 function checkUploadFolder() {
@@ -13,7 +13,7 @@ export async function POST(req: NextRequest) {
   checkUploadFolder()
 
   const formData = await req.formData()
-  const image = formData.get('image') as File
+  const image = formData.get("image") as File
   const imageName = Date.now().toString() + image.name
   const imagePath = uploadPath + imageName
 

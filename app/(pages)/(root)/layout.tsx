@@ -1,8 +1,8 @@
-'use client'
+"use client"
 
-import Header from '@/app/components/shared/Header'
-import Sidebar from '@/app/components/shared/Sidebar'
-import { styled } from 'styled-components'
+import Header from "@/app/components/shared/Header"
+import Sidebar from "@/app/components/shared/Sidebar"
+import { styled } from "styled-components"
 
 type Props = {
   children: React.ReactNode
