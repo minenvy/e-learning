@@ -1,7 +1,9 @@
 "use client"
 
 import Header from "@/app/components/shared/Header"
+import Loading from "@/app/components/shared/Loading"
 import Sidebar from "@/app/components/shared/Sidebar"
+import { Suspense } from "react"
 import { styled } from "styled-components"
 
 type Props = {
@@ -14,7 +16,9 @@ export default function Layout({ children }: Props) {
       <Header />
       <Main>
         <Sidebar />
-        <Content>{children}</Content>
+        <Content>
+          <Suspense fallback={<Loading />}>{children}</Suspense>
+        </Content>
       </Main>
     </>
   )

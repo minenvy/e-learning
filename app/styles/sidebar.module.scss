@@ -4,6 +4,10 @@
   padding: 12px;
 }
 
+.border {
+  border-right: 1px solid var(--border-color);
+}
+
 .btn {
   height: 40px;
   display: flex;

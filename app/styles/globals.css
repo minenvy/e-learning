@@ -43,6 +43,7 @@
   --blue: #2f80ed;
   --orange: #ff9600;
   --grey: #e0e0e0;
+  --border-color: #f0f0f0;
 }
 
 @media (prefers-color-scheme: dark) {
