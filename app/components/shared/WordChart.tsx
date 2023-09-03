@@ -2,6 +2,7 @@ import WordColumn from '@/app/components/shared/WordColumn'
 import styles from '@/app/styles/word-chart.module.scss'
 import Button from '@/app/components/ui/Button'
 import Link from 'next/link'
+import { colors } from '@/app/constants/word-chart-colors'
 
 export default function WordChart() {
   const data = [20, 30, 25, 55, 15]
@@ -17,7 +18,7 @@ export default function WordChart() {
               order={id + 1}
               percent={numberOfWord / max}
               title={`${numberOfWord} từ`}
-              backgroundColor="red"
+              backgroundColor={colors[id]}
             />
           )
         })}
