@@ -21,18 +21,18 @@ export default function General() {
 
   return (
     <div>
-      <div>
-        <Editor
-          editorState={editorState}
-          wrapperClassName="demo-wrapper"
-          editorClassName="demo-editor"
-          onEditorStateChange={onEditorStateChange}
-        />
-        <textarea
-          disabled
-          value={draftToHtml(convertToRaw(editorState.getCurrentContent()))}
-        />
-      </div>
+            <div>
+              <Editor
+                editorState={editorState}
+                wrapperClassName="demo-wrapper"
+                editorClassName="demo-editor"
+                onEditorStateChange={onEditorStateChange}
+              />
+              <textarea
+                disabled
+                value={draftToHtml(convertToRaw(editorState.getCurrentContent()))}
+              />
+            </div>
     </div>
   )
 }
