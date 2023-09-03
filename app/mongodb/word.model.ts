@@ -3,38 +3,38 @@ import mongoose from "mongoose"
 const wordSchema = new mongoose.Schema({
   enVersion: {
     type: String,
-    required: true
+    required: true,
   },
   type: {
     type: String,
-    required: true
+    required: true,
   },
   explainMeaning: {
-    type: String
+    type: String,
   },
   example: {
-    type: String
+    type: String,
   },
   synonym: {
-    type: String
+    type: String,
   },
   image: {
-    type: String
+    type: String,
   },
   vieVersion: {
     type: String,
-    required: true
+    required: true,
   },
   createdAt: {
     type: Date,
-    default: Date.now
+    default: Date.now,
   },
   updatedAt: {
     type: Date,
-    default: Date.now
-  }
+    default: Date.now,
+  },
 })
 
-const Word = mongoose.models.Word || mongoose.model('word', wordSchema)
+const Word = mongoose.models.Word || mongoose.model("word", wordSchema)
 
 export default Word

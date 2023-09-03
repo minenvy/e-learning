@@ -1,12 +1,12 @@
-import { message } from 'antd'
+import { message } from "antd"
 
 export async function post(
   path: string,
   body: Object,
-  warningMessage?: string
+  warningMessage?: string,
 ) {
   const res = await fetch(path, {
-    method: 'post',
+    method: "post",
     body: JSON.stringify(body),
   })
 

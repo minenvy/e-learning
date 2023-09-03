@@ -1,4 +1,4 @@
-import styled from 'styled-components'
+import styled from "styled-components"
 
 type Props = {
   type: string
@@ -51,7 +51,7 @@ const CustomInput = styled.input`
 `
 const FocusInput = styled.span`
   &::before {
-    content: '';
+    content: "";
     display: block;
     position: absolute;
     bottom: -2px;

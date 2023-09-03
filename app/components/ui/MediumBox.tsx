@@ -1,4 +1,4 @@
-import styles from '@/app/styles/medium-box.module.scss'
+import styles from "@/app/styles/medium-box.module.scss"
 
 type Props = {
   icon: string
