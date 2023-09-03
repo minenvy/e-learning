@@ -12,7 +12,7 @@ const Editor = dynamic(
   { ssr: false },
 )
 
-export default function General() {
+export default function Writing() {
   const [editorState, setEditorState] = useState(EditorState.createEmpty())
 
   const onEditorStateChange = (state: EditorState) => {

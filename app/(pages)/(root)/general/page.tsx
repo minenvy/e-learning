@@ -1,20 +1,21 @@
-import Achievement from "@/app/components/shared/Achievement"
-import TwoOneLayout from "@/app/components/shared/TwoOneLayout"
-import WordChart from "@/app/components/shared/WordChart"
+import Achievement from "@/app/components/shared/general/Achievement"
+import CenterAlignBox from "@/app/components/ui/CenterAlignBox"
+import FractionLayout from "@/app/components/shared/FractionLayout"
+import WordChart from "@/app/components/shared/general/WordChart"
 import styles from "@/app/styles/general.module.scss"
 
 export default function General() {
-  const word = [20, 30, 25, 55, 15]
-  const max = Math.max(...word)
-
   return (
-    <TwoOneLayout
-      bigContent={
+    <FractionLayout
+      ratio={2}
+      bigPart={
         <div className={styles.boundary}>
-          <WordChart />
+          <CenterAlignBox>
+            <WordChart />
+          </CenterAlignBox>
         </div>
       }
-      smallContent={<Achievement />}
+      smallPart={<Achievement />}
     />
   )
 }

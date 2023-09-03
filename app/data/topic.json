@@ -1,768 +1,145 @@
 [
   {
-    "main": "Animals",
-    "sub": [
-      "Animal behaviour",
-      "Animal homes",
-      "Animals in general",
-      "Dogs",
-      "Farm animals",
-      "Groups of animals",
-      "Parts of animals",
-      "Pets",
-      "Reptiles and amphibians",
-      "Wild mammals",
-      "Working animals"
+    "topic": "Animals",
+    "subList": [
+      "Animals",
+      "Birds",
+      "Fish and shellfish",
+      "Insects, worms, etc."
     ]
   },
   {
-    "main": "Birds",
-    "sub": ["Bird behaviour", "Bird homes", "Birds", "Parts of birds"]
-  },
-  {
-    "main": "Fish and shellfish",
-    "sub": ["Fish", "Other sea creatures", "Parts of fish", "Shellfish"]
-  },
-  {
-    "main": "Insects, worms, etc.",
-    "sub": [
-      "Insect behaviour",
-      "Insect forms",
-      "Insect homes",
-      "Insects",
-      "Other invertebrates",
-      "Parts of insects",
-      "Spiders, etc.",
-      "Worms"
+    "topic": "Appearance",
+    "subList": [
+      "Appearance",
+      "Body",
+      "Clothes and Fashion",
+      "Colours and Shapes"
     ]
   },
   {
-    "main": "Appearance",
-    "sub": [
-      "Attractiveness",
-      "Beauty products",
-      "Body shape",
-      "Describing hair",
-      "Facial expressions",
-      "Facial hair",
-      "Posture and movement",
-      "Skin",
-      "Styling hair"
+    "topic": "Communication",
+    "subList": ["Language", "Phones, email and the internet"]
+  },
+  {
+    "topic": "Culture",
+    "subList": [
+      "Art",
+      "Film and theatre",
+      "Literature and writing",
+      "Music",
+      "TV, radio and news"
     ]
   },
   {
-    "main": "Body",
-    "sub": [
-      "Face",
-      "Hands and feet",
-      "Inside the body",
-      "Mouth and teeth",
-      "Parts of the body",
-      "Skeleton and muscles"
+    "topic": "Food and drink",
+    "subList": ["Cooking and eating", "Drinks", "Food"]
+  },
+  {
+    "topic": "Functions",
+    "subList": [
+      "Discussion and agreement",
+      "Doubt, guessing and certainty",
+      "Opinion and argument",
+      "Permission and obligation",
+      "Preferences and decisions",
+      "Suggestions and advice"
     ]
   },
   {
-    "main": "Clothes and Fashion",
-    "sub": [
-      "Accessories",
-      "Describing clothes",
-      "Footwear",
-      "Hats",
-      "Items of clothing",
-      "Jewellery",
-      "Parts of clothing",
-      "The fashion world",
-      "Wearing clothes"
-    ]
-  },
-  { "main": "Colours and Shapes", "sub": ["Colours", "Shapes"] },
-  {
-    "main": "Language",
-    "sub": [
-      "Features of language",
-      "Grammar",
-      "Language skills",
-      "Languages",
-      "Phonetics",
-      "Punctuation"
-    ]
-  },
-  {
-    "main": "Phones, email and the internet",
-    "sub": [
-      "Communication devices",
-      "Email",
-      "Making calls",
-      "Phone services",
-      "Social media",
-      "Text messages",
-      "Using the internet",
-      "Websites"
-    ]
-  },
-  {
-    "main": "Art",
-    "sub": [
-      "Art equipment",
-      "Artwork and techniques",
-      "Describing art",
-      "Styles of art",
-      "The art world"
-    ]
-  },
-  {
-    "main": "Film and theatre",
-    "sub": [
-      "Elements of a play or film",
-      "Film reviews and promotion",
-      "Film-making equipment",
-      "In the theatre",
-      "Making films",
-      "People in film and theatre",
-      "Producing a play",
-      "Showing films",
-      "Types of film",
-      "Types of play"
-    ]
-  },
-  {
-    "main": "Literature and writing",
-    "sub": [
-      "Characters in a story",
-      "Describing a story",
-      "Elements of a story",
-      "Parts of a book",
-      "People in publishing",
-      "Poetry",
-      "Types of story",
-      "Types of text",
-      "Writing and publishing"
-    ]
-  },
-  {
-    "main": "Music",
-    "sub": [
-      "Describing music",
-      "Listening to music",
-      "Live music",
-      "Musical instruments",
-      "People in the music world",
-      "Pieces of music",
-      "Producing music",
-      "Reading music",
-      "Styles of music"
-    ]
-  },
-  {
-    "main": "TV, radio and news",
-    "sub": [
-      "Broadcasting",
-      "Celebrity news",
-      "Journalism",
-      "Media people",
-      "TV and radio shows",
-      "The press",
-      "Watching TV/Listening to the radio"
-    ]
-  },
-  {
-    "main": "Cooking and eating",
-    "sub": [
-      "At the dining table",
-      "Diet",
-      "Eating out",
-      "Kitchen equipment",
-      "Meals",
-      "Preparing food",
-      "Restaurant people",
-      "Taste and texture of food",
-      "Types of restaurant"
-    ]
-  },
-  {
-    "main": "Drinks",
-    "sub": [
-      "Alcoholic drinks",
-      "Drinking",
-      "Non-alcoholic drinks",
-      "Preparing drinks"
-    ]
-  },
-  {
-    "main": "Food",
-    "sub": [
-      "Carbohydrates",
-      "Dairy and fats",
-      "Fruit and nuts",
-      "Herbs and spices",
-      "Meat, fish and seafood",
-      "Sauces",
-      "Savoury dishes",
-      "Sweets and desserts",
-      "Vegetables"
-    ]
-  },
-  {
-    "main": "Discussion and agreement",
-    "sub": [
-      "Agreement",
-      "Discussion",
-      "Ending an agreement",
-      "Mediation",
-      "Persuasion",
-      "Working together"
-    ]
-  },
-  {
-    "main": "Doubt, guessing and certainty",
-    "sub": ["Certainty", "Doubt", "Guessing", "Possibility", "Probability"]
-  },
-  {
-    "main": "Opinion and argument",
-    "sub": [
-      "Expressing agreement",
-      "Expressing an opinion",
-      "Expressing disagreement",
-      "Forming an opinion",
-      "Having a disagreement",
-      "Making an argument",
-      "Matching",
-      "Not matching"
-    ]
-  },
-  {
-    "main": "Permission and obligation",
-    "sub": ["Allowed", "Must", "Not allowed", "Rules"]
-  },
-  {
-    "main": "Preferences and decisions",
-    "sub": ["Decide", "Dislike", "Like", "Prefer"]
-  },
-  { "main": "Suggestions and advice", "sub": ["Advice", "Suggestion"] },
-  {
-    "main": "Disability",
-    "sub": ["Living with disability", "Types of disability"]
-  },
-  { "main": "Health and Fitness", "sub": ["Exercise", "Good health"] },
-  {
-    "main": "Health problems",
-    "sub": [
-      "Addiction",
-      "Being ill",
-      "Injuries",
-      "Poor health",
-      "Recovering from illness",
-      "Types of illness"
-    ]
-  },
-  {
-    "main": "Healthcare",
-    "sub": [
-      "Complementary medicine",
+    "topic": "Health",
+    "subList": [
+      "Disability",
+      "Health and Fitness",
+      "Health problems",
       "Healthcare",
-      "Hospitals",
-      "Medical equipment",
-      "Medical examinations",
-      "Medical staff",
-      "Operations"
+      "Mental health"
     ]
   },
   {
-    "main": "Mental health",
-    "sub": ["Mental health care", "Mental health problems"]
+    "topic": "Homes and buildings",
+    "subList": ["Buildings", "Gardens", "Houses and homes"]
   },
   {
-    "main": "Buildings",
-    "sub": [
-      "Architectural features",
-      "Architectural styles",
-      "Building location",
-      "Construction",
-      "Describing buildings",
-      "Historic buildings",
-      "Parts of a building",
-      "Public buildings",
-      "Religious buildings",
-      "Types of building"
-    ]
+    "topic": "Leisure",
+    "subList": ["Games and toys", "Hobbies", "Shopping"]
   },
-  { "main": "Gardens", "sub": ["Gardening", "In the garden"] },
   {
-    "main": "Houses and homes",
-    "sub": [
-      "Buying a home",
-      "Furniture",
-      "House equipment",
-      "Housework",
-      "Interior décor",
-      "Parts of a house",
-      "Renting a home",
-      "Rooms in a house",
-      "Types of house"
+    "topic": "Notions",
+    "subList": [
+      "Change, cause and effect",
+      "Danger",
+      "Difficulty and failure",
+      "Success"
     ]
   },
   {
-    "main": "Games and toys",
-    "sub": [
-      "Ball games",
-      "Board games",
-      "Card games",
-      "Children's games",
-      "Computer games",
-      "Games in general",
-      "Indoor games",
-      "Toys"
+    "topic": "People",
+    "subList": [
+      "Education",
+      "Family and relationships",
+      "Feelings",
+      "Life stages",
+      "Personal qualities"
     ]
   },
   {
-    "main": "Hobbies",
-    "sub": ["Activities and interests", "Crafts and skills"]
-  },
-  {
-    "main": "Shopping",
-    "sub": [
-      "Departments in stores",
-      "Online shopping",
-      "Paying for shopping",
-      "Shopping in stores",
-      "Types of store"
-    ]
-  },
-  { "main": "Change, cause and effect", "sub": ["Cause and effect", "Change"] },
-  {
-    "main": "Danger",
-    "sub": ["Dangerous people/things", "Involving danger", "Preventing danger"]
-  },
-  {
-    "main": "Difficulty and failure",
-    "sub": [
-      "Accepting failure",
-      "Causing difficulty",
-      "Causing failure",
-      "Involving difficulty",
-      "Likely to fail",
-      "Resulting in failure",
-      "Unsuccessful people/things"
+    "topic": "Politics and society",
+    "subList": [
+      "Crime and punishment",
+      "Law and justice",
+      "People in society",
+      "Politics",
+      "Religion and festivals",
+      "Social issues",
+      "War and conflict"
     ]
   },
   {
-    "main": "Success",
-    "sub": [
-      "Achieving success",
-      "Acknowledging success",
-      "Ambition",
-      "Predicting success",
-      "Successful people",
-      "Successful things"
+    "topic": "Science and technology",
+    "subList": [
+      "Biology",
+      "Computers",
+      "Engineering",
+      "Maths and measurement",
+      "Physics and chemistry",
+      "Scientific research"
     ]
   },
   {
-    "main": "Education",
-    "sub": [
-      "Access to education",
-      "Degrees",
-      "Exams and assessment",
-      "In school",
-      "People in schools",
-      "School life",
-      "Subjects and courses",
-      "Teaching and learning",
-      "Types of school",
-      "Universities and colleges",
-      "University people"
+    "topic": "Sport",
+    "subList": [
+      "Sports: ball and racket sports",
+      "Sports: water sports",
+      "Sports: other sports"
     ]
   },
   {
-    "main": "Family and relationships",
-    "sub": [
-      "Family background",
-      "Friends",
-      "Names",
-      "Relationships ending",
-      "Relatives",
-      "Romance"
+    "topic": "The natural world",
+    "subList": [
+      "Farming",
+      "Geography",
+      "Plants and trees",
+      "The environment",
+      "Weather"
     ]
   },
   {
-    "main": "Feelings",
-    "sub": [
-      "Anger",
-      "Boredom",
-      "Disappointment",
-      "Disgust",
-      "Embarrassment",
-      "Excitement",
-      "Fear",
-      "Feelings in general",
-      "Happiness",
-      "Hate",
-      "Hunger",
-      "Loneliness",
-      "Love",
-      "Nervous",
-      "Showing interest",
-      "Surprise",
-      "Thirst",
-      "Tiredness",
-      "Unhappiness",
-      "Worry"
+    "topic": "Time and space",
+    "subList": ["History", "Space", "Time"]
+  },
+  {
+    "topic": "Travel",
+    "subList": [
+      "Holidays",
+      "Transport by air",
+      "Transport by bus and train",
+      "Transport by car or lorry",
+      "Transport by water"
     ]
   },
   {
-    "main": "Life stages",
-    "sub": [
-      "Adults",
-      "Babies",
-      "Birth",
-      "Death",
-      "Marriage",
-      "Old age",
-      "Pregnancy",
-      "Raising children",
-      "Youth"
-    ]
-  },
-  {
-    "main": "Personal qualities",
-    "sub": [
-      "Annoying",
-      "Brave",
-      "Clever",
-      "Confident",
-      "Cowardly",
-      "Dishonest",
-      "Energetic",
-      "Friendly",
-      "Honest",
-      "Immoral",
-      "Kind",
-      "Lazy",
-      "Moral",
-      "Proud",
-      "Selfish",
-      "Shy",
-      "Skills and qualities",
-      "Unpleasant"
-    ]
-  },
-  {
-    "main": "Crime and punishment",
-    "sub": [
-      "Committing crime",
-      "Criminals",
-      "Prison",
-      "Punishment",
-      "Solving crime",
-      "Types of crime"
-    ]
-  },
-  {
-    "main": "Law and justice",
-    "sub": [
-      "Justice",
-      "Legal documents",
-      "Legal processes",
-      "People in law",
-      "The law",
-      "The police"
-    ]
-  },
-  {
-    "main": "People in society",
-    "sub": [
-      "Belonging to society",
-      "Gender and sexuality",
-      "Race",
-      "Rank and status"
-    ]
-  },
-  {
-    "main": "Politics",
-    "sub": [
-      "Elections",
-      "Government",
-      "International relations",
-      "Parliament",
-      "Political views and systems",
-      "Politicians"
-    ]
-  },
-  {
-    "main": "Religion and festivals",
-    "sub": [
-      "Beliefs",
-      "Divine beings",
-      "Holidays and celebrations",
-      "Religious ceremonies",
-      "Religious holidays and festivals",
-      "Religious items",
-      "Religious people",
-      "Religious places",
-      "Religious practices",
-      "Religious texts"
-    ]
-  },
-  {
-    "main": "Social issues",
-    "sub": [
-      "Drugs",
-      "Helping others",
-      "Migration",
-      "Poverty and famine",
-      "Protest",
-      "Social justice",
-      "Unemployment"
-    ]
-  },
-  {
-    "main": "War and conflict",
-    "sub": [
-      "Peacekeeping",
-      "Terrorism",
-      "The air force",
-      "The armed forces",
-      "The army",
-      "The navy",
-      "War",
-      "Weapons"
-    ]
-  },
-  { "main": "Biology", "sub": ["Biology", "Genetics"] },
-  {
-    "main": "Computers",
-    "sub": [
-      "Computer hardware",
-      "Computer problems",
-      "Computer programming",
-      "Computer software",
-      "Using a computer"
-    ]
-  },
-  {
-    "main": "Engineering",
-    "sub": [
-      "Branches of engineering",
-      "Electronics",
-      "How machines work",
-      "Machines and devices"
-    ]
-  },
-  {
-    "main": "Maths and measurement",
-    "sub": [
-      "Mathematical terminology",
-      "Measurements",
-      "Numbers",
-      "Types of mathematics"
-    ]
-  },
-  {
-    "main": "Physics and chemistry",
-    "sub": [
-      "Chemistry and chemicals",
-      "Energy and physical forces",
-      "Materials and properties",
-      "Molecules and matter"
-    ]
-  },
-  {
-    "main": "Scientific research",
-    "sub": [
-      "Branches of science",
-      "Data",
-      "Experiments",
-      "Results",
-      "Scientific equipment",
-      "Study"
-    ]
-  },
-  {
-    "main": "Sports: ball and racket sports",
-    "sub": [
-      "American football",
-      "Ball sports in general",
-      "Baseball",
-      "Basketball",
-      "Cricket",
-      "Football",
-      "Golf",
-      "Other ball sports",
-      "Rugby",
-      "Tennis"
-    ]
-  },
-  {
-    "main": "Sports: other sports",
-    "sub": [
-      "Athletics",
-      "Combat sports",
-      "Cycling",
-      "Equine sports",
-      "Extreme sports",
-      "Other sports",
-      "Pool and snooker",
-      "Sports in general",
-      "Winter sports"
-    ]
-  },
-  {
-    "main": "Sports: water sports",
-    "sub": ["Boating", "Diving", "Swimming", "Water sports"]
-  },
-  {
-    "main": "Farming",
-    "sub": ["Animal farming", "Farm people", "Growing crops", "On the farm"]
-  },
-  {
-    "main": "Geography",
-    "sub": [
-      "Coastlines and the sea",
-      "Countries and continents",
-      "Describing geographic regions",
-      "Mountains and valleys",
-      "Other geographic features",
-      "Rivers and lakes"
-    ]
-  },
-  { "main": "Plants and trees", "sub": ["Plants", "Trees"] },
-  {
-    "main": "The environment",
-    "sub": [
-      "Climate change",
-      "Conservation",
-      "Natural disasters",
-      "The power industry",
-      "Waste and pollution"
-    ]
-  },
-  {
-    "main": "Weather",
-    "sub": [
-      "Describing weather",
-      "Rain",
-      "Sky",
-      "Snow and ice",
-      "Temperature",
-      "The atmosphere",
-      "Wind"
-    ]
-  },
-  {
-    "main": "History",
-    "sub": [
-      "Events in history",
-      "Historical records",
-      "Objects in history",
-      "People in history",
-      "Periods in history",
-      "Studying history"
-    ]
-  },
-  {
-    "main": "Space",
-    "sub": [
-      "Space travel",
-      "The Earth and the atmosphere",
-      "The sun and the moon",
-      "The universe"
-    ]
-  },
-  {
-    "main": "Time",
-    "sub": [
-      "Dates",
-      "Days",
-      "Months",
-      "Time expressions",
-      "Time periods",
-      "Time zones",
-      "Times of day",
-      "Times of year"
-    ]
-  },
-  {
-    "main": "Holidays",
-    "sub": [
-      "Camping",
-      "Holiday accommodation",
-      "Holidays in general",
-      "Staying in a hotel",
-      "The tourist industry",
-      "Types of holiday/vacation"
-    ]
-  },
-  {
-    "main": "Transport by air",
-    "sub": [
-      "Aircraft",
-      "Airports",
-      "Parts of a plane",
-      "People in air travel",
-      "Plane travel"
-    ]
-  },
-  {
-    "main": "Transport by bus and train",
-    "sub": ["Railway tracks and stations", "Train and bus travel", "Trains"]
-  },
-  {
-    "main": "Transport by car or lorry",
-    "sub": [
-      "Controlling traffic",
-      "Driving",
-      "Motoring problems and accidents",
-      "On the road",
-      "Parts of a car",
-      "People in motoring",
-      "The car industry",
-      "Types of road",
-      "Types of vehicle"
-    ]
-  },
-  {
-    "main": "Transport by water",
-    "sub": [
-      "Parts of boats",
-      "People in sea travel",
-      "Travelling by boat",
-      "Types of boat"
-    ]
-  },
-  {
-    "main": "Business",
-    "sub": [
-      "Business deals",
-      "Business people",
-      "Manufacturing",
-      "Marketing",
-      "Running a business"
-    ]
-  },
-  {
-    "main": "Jobs",
-    "sub": ["Describing jobs", "Job titles", "Jobs and professions"]
-  },
-  {
-    "main": "Money",
-    "sub": [
-      "Banking",
-      "Buying and selling",
-      "Economic trends",
-      "Finance",
-      "Gambling",
-      "Payments",
-      "The economy",
-      "Value"
-    ]
-  },
-  {
-    "main": "Working life",
-    "sub": [
-      "Business meetings",
-      "Describing work",
-      "Job interviews",
-      "Office life",
-      "Pay and conditions at work"
-    ]
+    "topic": "Work and business",
+    "subList": ["Business", "Jobs", "Money", "Working life"]
   }
 ]
