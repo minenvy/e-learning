@@ -6,7 +6,7 @@ import styles from "@/app/styles/general.module.scss"
 import getYoutubeTranscript from "@/app/lib/utils/get-youtube-transcript"
 
 export default function General() {
-  getYoutubeTranscript('')
+  getYoutubeTranscript("")
   return (
     <FractionLayout
       ratio={2}

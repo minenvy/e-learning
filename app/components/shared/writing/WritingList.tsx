@@ -10,25 +10,25 @@ export default function WritingList({ filter }: Props) {
     {
       title: "bai 1",
       image: "https://i.ytimg.com/vi/yCnM5VKYgik/hqdefault.jpg",
-      description: 'ok',
+      description: "ok",
     },
     {
       title: "bai 2",
       image:
         "https://i.ytimg.com/vi/G5b8S232Rpc/hq720.jpg?sqp=-oaymwFDCNAFEJQDSFryq4qpAzUIARUAAIhCGAHYAQHiAQwIGhACGAYgATgBQAHwAQH4Af4JgALQBYoCDAgAEAEYciBCKDgwDw==&rs=AOn4CLBi2-5SnwqLTQF_4y59L8qeAJiC-Q",
-      description: 'ok',
+      description: "ok",
     },
     {
       title: "bai 3",
       image:
         "https://i.ytimg.com/vi/G5b8S232Rpc/hq720.jpg?sqp=-oaymwFDCNAFEJQDSFryq4qpAzUIARUAAIhCGAHYAQHiAQwIGhACGAYgATgBQAHwAQH4Af4JgALQBYoCDAgAEAEYciBCKDgwDw==&rs=AOn4CLBi2-5SnwqLTQF_4y59L8qeAJiC-Q",
-      description: 'ok',
+      description: "ok",
     },
     {
       title: "bai 4",
       image:
         "https://i.ytimg.com/vi/G5b8S232Rpc/hq720.jpg?sqp=-oaymwFDCNAFEJQDSFryq4qpAzUIARUAAIhCGAHYAQHiAQwIGhACGAYgATgBQAHwAQH4Af4JgALQBYoCDAgAEAEYciBCKDgwDw==&rs=AOn4CLBi2-5SnwqLTQF_4y59L8qeAJiC-Q",
-      description: 'ok',
+      description: "ok",
     },
   ]
 
