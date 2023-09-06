@@ -57,6 +57,10 @@ export default function SubList({ subList }: Props) {
 const StyledLink = styled(Link)`
   display: flex;
   justify-content: space-between;
+
+  &:hover span {
+    color: #69b1ff;
+  }
 `
 const StyledSpan = styled.span`
   color: #999999;

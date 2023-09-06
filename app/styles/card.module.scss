@@ -1,0 +1,78 @@
+.wrapper {
+  display: inline-block;
+  width: calc(100% / 3 - 16px);
+  height: 320px;
+  margin: 0 8px 40px;
+  cursor: pointer;
+
+  &:hover {
+    .more {
+      visibility: visible;
+    }
+  }
+}
+
+.img_boundary {
+  width: 100%;
+  height: 225px;
+
+  &:hover {
+    img {
+      border-radius: 0;
+    }
+
+    span {
+      visibility: visible;
+    }
+  }
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 12px;
+    transition: all 0.3s;
+  }
+}
+
+.meta {
+  .title {
+    width: 100%;
+    display: flex;
+  }
+
+  .more {
+    visibility: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    svg {
+      font-size: 20px;
+    }
+  }
+
+  .ellipse_text {
+    max-width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+  }
+
+  .name {
+    @extend .ellipse_text;
+    flex: 1;
+    font-weight: 600;
+    font-size: 16px;
+    margin-top: 12px;
+    margin-bottom: 4px;
+  }
+
+  .description {
+    @extend .ellipse_text;
+    color: rgba(0, 0, 0, 0.45);
+    font-size: 14px;
+  }
+}
