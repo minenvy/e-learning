@@ -1,38 +1,36 @@
 "use client"
 
-import { EditorState, convertToRaw } from "draft-js"
-import draftToHtml from "draftjs-to-html"
-import htmlToDraft from "html-to-draftjs"
-import dynamic from "next/dynamic"
-import { useState } from "react"
-import "react-draft-wysiwyg/dist/react-draft-wysiwyg.css"
+import WritingList from "@/app/components/shared/writing/WritingList"
+import useDebounce from "@/app/hooks/use-debounce"
+import { Input } from "antd"
+import { styled } from "styled-components"
 
-const Editor = dynamic(
-  () => import("react-draft-wysiwyg").then((mod) => mod.Editor),
-  { ssr: false },
-)
+const searchWidth = 300
 
 export default function Writing() {
-  const [editorState, setEditorState] = useState(EditorState.createEmpty())
+  const { previousValue, value, onChange } = useDebounce("")
 
-  const onEditorStateChange = (state: EditorState) => {
-    setEditorState(state)
+  const changeSearchKey = (e: React.ChangeEvent<HTMLInputElement>) => {
+    onChange(e.target.value)
   }
 
   return (
-    <div>
-      <div>
-        <Editor
-          editorState={editorState}
-          wrapperClassName="demo-wrapper"
-          editorClassName="demo-editor"
-          onEditorStateChange={onEditorStateChange}
+    <main>
+      <InputBox>
+        <Input.Search
+          value={previousValue}
+          placeholder="Tìm kiếm tên bài viết..."
+          style={{ width: searchWidth }}
+          onChange={changeSearchKey}
         />
-        <textarea
-          disabled
-          value={draftToHtml(convertToRaw(editorState.getCurrentContent()))}
-        />
-      </div>
-    </div>
+      </InputBox>
+      <WritingList filter={value.toString()} />
+    </main>
   )
 }
+
+const InputBox = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+`
