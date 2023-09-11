@@ -1,7 +1,7 @@
 import mongoose from "mongoose"
 
 const wordSchema = new mongoose.Schema({
-  enVersion: {
+  enWord: {
     type: String,
     required: true,
   },
@@ -9,19 +9,22 @@ const wordSchema = new mongoose.Schema({
     type: String,
     required: true,
   },
-  explainMeaning: {
+  definition: {
     type: String,
   },
   example: {
     type: String,
   },
-  synonym: {
+  synonyms: {
+    type: String,
+  },
+  antonyms: {
     type: String,
   },
   image: {
     type: String,
   },
-  vieVersion: {
+  vieWord: {
     type: String,
     required: true,
   },
@@ -29,12 +32,8 @@ const wordSchema = new mongoose.Schema({
     type: Date,
     default: Date.now,
   },
-  updatedAt: {
-    type: Date,
-    default: Date.now,
-  },
 })
 
-const Word = mongoose.models.Word || mongoose.model("word", wordSchema)
+const Word = mongoose.models["word"] || mongoose.model("word", wordSchema)
 
 export default Word

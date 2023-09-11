@@ -4,14 +4,18 @@ import Button from "@/app/components/ui/Button"
 import Link from "next/link"
 import { colors } from "@/app/constants/word-chart-colors"
 
-export default function WordChart() {
-  const data = [20, 30, 25, 55, 15]
-  const max = Math.max(...data)
+type Props = {
+  generalCount: number[]
+  reviewCount: number
+}
+
+export default function WordChart({ generalCount, reviewCount }: Props) {
+  const max = Math.max(...generalCount)
 
   return (
     <>
       <div className={styles.chart}>
-        {data.map((numberOfWord, id) => {
+        {generalCount.map((numberOfWord, id) => {
           return (
             <WordColumn
               key={id}
@@ -25,7 +29,7 @@ export default function WordChart() {
       </div>
       <div className={styles.divider} />
       <div className={styles.btn_dashboard}>
-        <p>{`Chuẩn bị ôn tập: ${data[0]} từ`}</p>
+        <p>{`Chuẩn bị ôn tập: ${reviewCount} từ`}</p>
         <Button>
           <Link href="/review">Ôn tập ngay</Link>
         </Button>

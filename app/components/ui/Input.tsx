@@ -1,15 +1,15 @@
 import styled from "styled-components"
 
 type Props = {
-  type: string
+  type?: string
   label: string
-  placeholder: string
+  placeholder?: string
   value: string
   onChange: (e: React.ChangeEvent<HTMLInputElement>) => void
 }
 
 export default function Input({
-  type,
+  type = "text",
   label,
   placeholder,
   value,
@@ -40,7 +40,7 @@ const Label = styled.span`
 `
 const CustomInput = styled.input`
   width: 100%;
-  height: 45px;
+  height: 20px;
   color: black;
   background-color: white;
   padding: 0 8px;

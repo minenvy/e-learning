@@ -44,9 +44,10 @@
   --orange: #ff9600;
   --grey: #e0e0e0;
   --border-color: #f0f0f0;
+  --blue-white: #f7fafc;
 }
 
-@media (prefers-color-scheme: dark) {
+/* @media (prefers-color-scheme: dark) {
   :root {
     --foreground-rgb: 255, 255, 255;
     --background-start-rgb: 0, 0, 0;
@@ -77,7 +78,7 @@
     --card-rgb: 100, 100, 100;
     --card-border-rgb: 200, 200, 200;
   }
-}
+} */
 
 * {
   box-sizing: border-box;
@@ -97,8 +98,8 @@ body {
   width: 100vw;
   height: 100vh;
   overflow-x: hidden;
-  color: rgb(var(--background-start-rgb));
-  background: rgb(var(--foreground-rgb));
+  color: black;
+  background-color: white;
 }
 
 a {

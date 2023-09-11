@@ -1,0 +1,21 @@
+.close_icon {
+  float: right;
+  padding: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  transition: all 0.3s;
+  cursor: pointer;
+
+  &:hover {
+    background-color: #ddd;
+  }
+
+  img {
+    width: 20px;
+    height: 20px;
+    object-fit: cover;
+  }
+}

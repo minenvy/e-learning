@@ -17,12 +17,8 @@ export default function Form({ children }: Props) {
 }
 
 const Wrapper = styled.div`
-  width: 100vw;
-  min-height: 100vh;
-  background-image: url("/images/background.jpg");
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
+  width: 100%;
+  height: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -31,7 +27,8 @@ const Container = styled.div`
   width: 500px;
   background: #fff;
   border-radius: 10px;
-  padding: 55px;
+  border: 1px solid #ddd;
+  padding: 25px;
 `
 const StyledForm = styled.form`
   width: 100%;

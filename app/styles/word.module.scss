@@ -1,0 +1,16 @@
+.wrapper {
+  width: 100%;
+  display: flex;
+
+  h2 {
+    flex: 5;
+  }
+
+  p {
+    flex: 5;
+  }
+
+  .type {
+    flex: 2;
+  }
+}
