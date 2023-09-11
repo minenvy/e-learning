@@ -1,4 +1,4 @@
-'use client'
+"use client"
 
 import styles from "@/app/styles/close-button.module.scss"
 

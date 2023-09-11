@@ -15,8 +15,8 @@ const videoSchema = new mongoose.Schema({
   },
   createdAt: {
     type: Date,
-    default: Date.now
-  }
+    default: Date.now,
+  },
 })
 
 const Video = mongoose.models["video"] || mongoose.model("video", videoSchema)

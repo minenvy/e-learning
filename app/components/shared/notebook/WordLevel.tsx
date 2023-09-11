@@ -1,5 +1,3 @@
 export default function WordLevel() {
-  return <div>
-    
-  </div>
+  return <div></div>
 }

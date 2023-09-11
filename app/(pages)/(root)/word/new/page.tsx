@@ -51,7 +51,7 @@ export default function Page() {
     setExample(e.target.value)
   }
   const onSubmit = async () => {
-    const imageLink = image ? await uploadImage(image) : ''
+    const imageLink = image ? await uploadImage(image) : ""
     const res = await addNewWord({
       enWord,
       type,
@@ -60,7 +60,7 @@ export default function Page() {
       synonyms,
       antonyms,
       example,
-      image: imageLink
+      image: imageLink,
     })
 
     if (res) exit()
