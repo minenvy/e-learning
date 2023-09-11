@@ -10,7 +10,7 @@ export async function post(
     body: JSON.stringify(body),
   })
 
-  if (!res.ok) {
+  if (!res || !res.ok) {
     message.warning(warningMessage)
   } else {
     const data = await res.json()

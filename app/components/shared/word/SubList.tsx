@@ -6,7 +6,10 @@ import { textToLink } from "@/app/lib/utils/text-to-link"
 import { styled } from "styled-components"
 import { getSubListFromTitle } from "@/app/lib/utils/get-sublist-from-title"
 import Link from "next/link"
+import Dictionary from "@/app/interfaces/dictionary"
+import dictionary from "@/app/data/dictionary.json"
 
+const wordUrl = "/word"
 const panelStyle: React.CSSProperties = {
   backgroundColor: "#f2f2f2",
   border: "none",
@@ -14,9 +17,10 @@ const panelStyle: React.CSSProperties = {
 
 type Props = {
   subList: string[]
+  countLearnedWordEachTopic: Dictionary
 }
 
-export default function SubList({ subList }: Props) {
+export default function SubList({ subList, countLearnedWordEachTopic }: Props) {
   const getItems = (panelStyle: React.CSSProperties) => {
     return subList.map((subTitle) => {
       const childTopic = getSubListFromTitle(subTitle)
@@ -27,10 +31,25 @@ export default function SubList({ subList }: Props) {
         children: (
           <>
             {childTopic.sub.map((subListTitle) => {
+              const link = textToLink(subListTitle)
+              const count =
+                countLearnedWordEachTopic.dictionary.find(
+                  (topic) => topic.type === link,
+                )?.count || 0
+              const maxCount =
+                dictionary.find((topic) => topic.type === link)?.count || 0
+
               return (
-                <StyledLink href="" key={subListTitle}>
+                <StyledLink
+                  href={
+                    count < maxCount ? `/word/learn/${link}/${count}` : wordUrl
+                  }
+                  key={subListTitle}
+                >
                   <span>* {subListTitle}</span>
-                  <StyledSpan>0/100</StyledSpan>
+                  <StyledSpan>
+                    {count}/{maxCount}
+                  </StyledSpan>
                 </StyledLink>
               )
             })}

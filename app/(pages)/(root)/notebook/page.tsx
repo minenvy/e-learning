@@ -1,14 +1,13 @@
-"use client"
+import FractionLayout from "@/app/components/shared/FractionLayout"
+import WordLevel from "@/app/components/shared/notebook/WordLevel"
+import WordList from "@/app/components/shared/notebook/WordList"
 
-import { useUser } from "@clerk/nextjs"
-
-export default function Notebook() {
-  const { user } = useUser()
-  console.log(user)
-
+export default async function Notebook() {
   return (
-    <main>
-      <p>General</p>
-    </main>
+    <FractionLayout
+      ratio={2}
+      bigPart={<WordList />}
+      smallPart={<WordLevel />}
+    />
   )
 }

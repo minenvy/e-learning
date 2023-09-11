@@ -6,7 +6,14 @@ import { CaretRightOutlined } from "@ant-design/icons"
 import { textToLink } from "@/app/lib/utils/text-to-link"
 import { styled } from "styled-components"
 import SubList from "./SubList"
+import Link from "next/link"
+import Dictionary from "@/app/interfaces/dictionary"
 
+const basicWordText = "3000 basic words"
+const basicWordCount = 3000
+const basicWordType = "3000-words"
+const basicWordLearnPageUrl = "/word/learn/3000-words/"
+const wordUrl = "/word"
 const panelStyle: React.CSSProperties = {
   marginBottom: 24,
   background: "#f2f2f2",
@@ -14,7 +21,15 @@ const panelStyle: React.CSSProperties = {
   border: "none",
 }
 
-export default function Topic() {
+type Props = {
+  countLearnedWordEachTopic: Dictionary
+}
+
+export default function Topic({ countLearnedWordEachTopic }: Props) {
+  const basicWordLearnedCount =
+    countLearnedWordEachTopic.dictionary.find(
+      (topic) => topic.type === basicWordType,
+    )?.count || 0
   const getItems = (panelStyle: React.CSSProperties) => {
     return topics.map(({ topic, subList }) => {
       const imgUrl = `/images/${textToLink(topic)}.svg`
@@ -27,7 +42,12 @@ export default function Topic() {
             {topic}
           </Label>
         ),
-        children: <SubList subList={subList} />,
+        children: (
+          <SubList
+            subList={subList}
+            countLearnedWordEachTopic={countLearnedWordEachTopic}
+          />
+        ),
         style: panelStyle,
       }
     })
@@ -44,10 +64,23 @@ export default function Topic() {
         style={{ background: "white" }}
         items={getItems(panelStyle)}
       />
-      <Button>
-        <Img src="/images/3000.png" alt="icon" />
-        <span>3000 basic words</span>
-      </Button>
+      <Link
+        href={
+          basicWordLearnedCount < basicWordCount
+            ? `${basicWordLearnPageUrl}${basicWordLearnedCount}`
+            : wordUrl
+        }
+      >
+        <Button>
+          <Title>
+            <Img src="/images/3000.png" alt="icon" />
+            <span>{basicWordText}</span>
+          </Title>
+          <StyledSpan>
+            {basicWordLearnedCount}/{basicWordCount}
+          </StyledSpan>
+        </Button>
+      </Link>
     </Wrapper>
   )
 }
@@ -77,9 +110,20 @@ const Button = styled.button`
   border: none;
   padding: 12px;
   display: flex;
-  justify-content: flex-start;
+  justify-content: space-between;
   align-items: center;
-  gap: 16px;
   margin-bottom: 24px;
   cursor: pointer;
+
+  &:hover span {
+    color: #69b1ff;
+  }
+`
+const Title = styled.span`
+  display: flex;
+  align-items: center;
+  gap: 16px;
+`
+const StyledSpan = styled.span`
+  color: #999999;
 `
