@@ -44,7 +44,7 @@ export default function WordLearning({ words }: Props) {
   const done = async () => {
     if (isLoading) return
     setIsLoading(true)
-    
+
     // Get full info of need review words
     const mustReviewWord: WordType[] = []
     const maxLevelWord: WordType[] = []

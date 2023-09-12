@@ -5,15 +5,8 @@ import LevelWord from "@/app/mongodb/level-word.model"
 
 export async function POST(req: NextRequest) {
   const { userId } = getAuth(req)
-  const {
-    enWord,
-    type,
-    definition,
-    synonyms,
-    antonyms,
-    example,
-    image,
-  } = await req.json()
+  const { enWord, type, definition, synonyms, antonyms, example, image } =
+    await req.json()
 
   const newWord = new Word({
     userId,

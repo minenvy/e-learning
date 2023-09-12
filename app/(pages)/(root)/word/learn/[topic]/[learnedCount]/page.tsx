@@ -1,6 +1,6 @@
 import CenterAlignBox from "@/app/components/ui/CenterAlignBox"
 import { getNextTenWords } from "@/app/lib/actions/dictionary.actions"
-import styles from '@/app/styles/learn-word.module.scss'
+import styles from "@/app/styles/learn-word.module.scss"
 import WordLearning from "@/app/components/shared/word/WordLearning"
 
 type Props = {
