@@ -18,7 +18,10 @@ export async function getCountWordForAllLevel(userId: string) {
     numberOfEachLevel[levelWord.level]++
   })
 
-  return numberOfEachLevel.shift()
+  // Remove count of level 0 word
+  numberOfEachLevel.shift()
+
+  return numberOfEachLevel
 }
 
 export async function countLearnedWord(userId: string) {

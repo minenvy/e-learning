@@ -27,9 +27,9 @@ type Props = {
 
 export default function Topic({ countLearnedWordEachTopic }: Props) {
   const basicWordLearnedCount =
-    countLearnedWordEachTopic.dictionary.find(
-      (topic) => topic.type === basicWordType,
-    )?.count || 0
+    countLearnedWordEachTopic.find((topic) => topic.type === basicWordType)
+      ?.count || 0
+
   const getItems = (panelStyle: React.CSSProperties) => {
     return topics.map(({ topic, subList }) => {
       const imgUrl = `/images/${textToLink(topic)}.svg`

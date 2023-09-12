@@ -4,6 +4,7 @@ const wordSchema = new mongoose.Schema({
   enWord: {
     type: String,
     required: true,
+    unique: true,
   },
   type: {
     type: String,
@@ -11,6 +12,7 @@ const wordSchema = new mongoose.Schema({
   },
   definition: {
     type: String,
+    required: true,
   },
   example: {
     type: String,
@@ -23,14 +25,6 @@ const wordSchema = new mongoose.Schema({
   },
   image: {
     type: String,
-  },
-  vieWord: {
-    type: String,
-    required: true,
-  },
-  createdAt: {
-    type: Date,
-    default: Date.now,
   },
 })
 

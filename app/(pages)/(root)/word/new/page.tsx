@@ -19,7 +19,6 @@ export default function Page() {
   const [image, setImage] = useState<File>()
   const [enWord, setEnWord] = useState("")
   const [type, setType] = useState("")
-  const [vieWord, setVieWord] = useState("")
   const [definition, setDefinition] = useState("")
   const [synonyms, setSynonyms] = useState("")
   const [antonyms, setAntonyms] = useState("")
@@ -34,9 +33,6 @@ export default function Page() {
   }
   const changeType = (e: React.ChangeEvent<HTMLInputElement>) => {
     setType(e.target.value)
-  }
-  const changeVieWord = (e: React.ChangeEvent<HTMLInputElement>) => {
-    setVieWord(e.target.value)
   }
   const changeDefinition = (e: React.ChangeEvent<HTMLInputElement>) => {
     setDefinition(e.target.value)
@@ -55,7 +51,6 @@ export default function Page() {
     const res = await addNewWord({
       enWord,
       type,
-      vieWord,
       definition,
       synonyms,
       antonyms,
@@ -93,20 +88,13 @@ export default function Page() {
             </RequiredBoundary>
           </MarginBoundary>
           <MarginBoundary>
-            <RequiredBoundary data-has-value={!!vieWord}>
+            <RequiredBoundary data-has-value={!!definition}>
               <Input
-                label="Từ tiếng Việt"
-                value={vieWord}
-                onChange={changeVieWord}
+                label="Định nghĩa"
+                value={definition}
+                onChange={changeDefinition}
               />
             </RequiredBoundary>
-          </MarginBoundary>
-          <MarginBoundary>
-            <Input
-              label="Định nghĩa bằng tiếng Anh"
-              value={definition}
-              onChange={changeDefinition}
-            />
           </MarginBoundary>
           <MarginBoundary>
             <Input

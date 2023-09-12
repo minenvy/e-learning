@@ -1,7 +1,7 @@
 import CenterAlignBox from "@/app/components/ui/CenterAlignBox"
 import FractionLayout from "@/app/components/shared/FractionLayout"
 import Topic from "@/app/components/shared/word/Topic"
-import FloatAddWordButton from "@/app/components/shared/word/FloatButton"
+import FloatAddWordButton from "@/app/components/shared/word/FloatAddWordButton"
 import { getCountEachTopic } from "@/app/lib/actions/dictionary.actions"
 import { auth } from "@clerk/nextjs"
 

@@ -27,6 +27,8 @@ export default function Layout({ children }: Props) {
 const Main = styled.div`
   display: flex;
   gap: 36px;
+  height: calc(100vh - 56px);
+  overflow: auto;
 `
 const Content = styled.div`
   flex: 5;

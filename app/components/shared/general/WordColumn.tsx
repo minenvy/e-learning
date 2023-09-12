@@ -23,8 +23,8 @@ export default function Column({
   const marginTop = parentHeight - height
 
   useEffect(() => {
-    setHeight(transformedHeight)
-  }, [])
+    if (transformedHeight) setHeight(transformedHeight)
+  }, [transformedHeight])
 
   return (
     <div className={styles.wrapper}>
