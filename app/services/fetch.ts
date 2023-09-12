@@ -11,10 +11,12 @@ export async function post(
   })
 
   if (!res || !res.ok) {
+    message.destroy()
     message.warning(warningMessage)
   } else {
     const data = await res.json()
-    message.success(data?.message)
+    message.destroy()
+    if (data?.message) message.success(data.message)
   }
 
   return res.ok

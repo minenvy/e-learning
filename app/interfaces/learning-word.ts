@@ -1,9 +1,10 @@
-export default interface Word {
+export default interface LearningWord {
   enWord: string
   type: string
   definition: string
-  example?: string
   synonyms?: string
   antonyms?: string
+  example?: string
+  phonetic?: string
   image?: string
 }

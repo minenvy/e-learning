@@ -24,7 +24,7 @@ export async function POST(req: NextRequest) {
   const newLevelWord = new LevelWord({
     userId,
     word: wordInDb._id,
-    level: 1,
+    level: 7,
   })
   await newLevelWord.save()
 

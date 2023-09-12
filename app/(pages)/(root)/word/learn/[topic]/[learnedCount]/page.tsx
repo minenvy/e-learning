@@ -1,5 +1,7 @@
+import CenterAlignBox from "@/app/components/ui/CenterAlignBox"
 import { getNextTenWords } from "@/app/lib/actions/dictionary.actions"
-import { auth } from "@clerk/nextjs"
+import styles from "@/app/styles/learn-word.module.scss"
+import WordLearning from "@/app/components/shared/word/WordLearning"
 
 type Props = {
   params: {
@@ -11,10 +13,13 @@ type Props = {
 export default async function LearnWord({
   params: { topic, learnedCount },
 }: Props) {
-  const { userId } = auth()
   const words = await getNextTenWords(topic, learnedCount)
 
-  console.log(words)
-
-  return <p>learn</p>
+  return (
+    <CenterAlignBox>
+      <div className={styles.gray_box}>
+        <WordLearning words={words} />
+      </div>
+    </CenterAlignBox>
+  )
 }

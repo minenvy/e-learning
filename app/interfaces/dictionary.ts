@@ -1,8 +1,6 @@
-export default interface Dictionary {
-  dictionary: [
-    {
-      type: string
-      count: number
-    },
-  ]
-}
+type Dictionary = Array<{
+  type: string
+  count: number
+}>
+
+export default Dictionary

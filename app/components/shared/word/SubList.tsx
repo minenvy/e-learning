@@ -33,9 +33,8 @@ export default function SubList({ subList, countLearnedWordEachTopic }: Props) {
             {childTopic.sub.map((subListTitle) => {
               const link = textToLink(subListTitle)
               const count =
-                countLearnedWordEachTopic.dictionary.find(
-                  (topic) => topic.type === link,
-                )?.count || 0
+                countLearnedWordEachTopic.find((topic) => topic.type === link)
+                  ?.count || 0
               const maxCount =
                 dictionary.find((topic) => topic.type === link)?.count || 0
 
