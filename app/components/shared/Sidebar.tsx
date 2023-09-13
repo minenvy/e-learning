@@ -10,9 +10,9 @@ export default function Sidebar() {
     <nav className={styles.wrapper}>
       <div className={styles.border}>
         {sidebarLinks.map((link) => {
-          const isActive = pathname.includes(link.value)
+          const isActive = pathname.includes(link.key)
           return (
-            <Link href={link.value} key={link.value}>
+            <Link href={link.link} key={link.key}>
               <div className={`${styles.btn} ${isActive && styles.active_btn}`}>
                 <img src={link.icon} alt="icon" />
                 <p>{link.label}</p>

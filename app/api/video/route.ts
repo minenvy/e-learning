@@ -7,7 +7,7 @@ const errorStatus = 400
 export async function GET(req: NextRequest) {
   const videoId = req.nextUrl.searchParams.get("videoId")
 
-  const transcript = await getYoutubeTranscript(videoId as string)
+  const transcript = await getYoutubeTranscript(videoId!)
 
   if (!transcript)
     return new NextResponse(errorMessage, {

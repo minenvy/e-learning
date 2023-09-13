@@ -16,10 +16,10 @@ import {
 export default async function Achievements() {
   const { userId } = auth()
 
-  const learnedWordCount = await countLearnedWord(userId as string)
-  const maxStreak = await countMaxStreak(userId as string)
-  const nowStreak = await countNowStreak(userId as string)
-  const familiarWordCount = await countFamiliarWord(userId as string)
+  const learnedWordCount = await countLearnedWord(userId!)
+  const maxStreak = await countMaxStreak(userId!)
+  const nowStreak = await countNowStreak(userId!)
+  const familiarWordCount = await countFamiliarWord(userId!)
 
   return (
     <div className={styles.wrapper}>

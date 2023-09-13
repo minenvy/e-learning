@@ -15,7 +15,6 @@ export default function WordCard({ word }: Props) {
   const {
     enWord,
     type,
-    vieWord,
     definition,
     synonyms,
     antonyms,
@@ -75,7 +74,6 @@ export default function WordCard({ word }: Props) {
           {phonetic && <p>{phonetic}</p>}
           <p>{`(${type})`}</p>
           <p>{definition}</p>
-          {vieWord && <p>{vieWord}</p>}
         </Card>
       )}
     </Wrapper>

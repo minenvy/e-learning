@@ -28,6 +28,6 @@ const wordSchema = new mongoose.Schema({
   },
 })
 
-const Word = mongoose.models["word"] || mongoose.model("word", wordSchema)
+const Word = mongoose.models["Word"] || mongoose.model("Word", wordSchema)
 
 export default Word

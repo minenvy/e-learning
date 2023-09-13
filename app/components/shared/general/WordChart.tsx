@@ -4,6 +4,8 @@ import Button from "@/app/components/ui/Button"
 import Link from "next/link"
 import { colors } from "@/app/constants/word-chart-colors"
 
+const reviewUrl = "/review"
+
 type Props = {
   generalCount: number[]
   reviewCount: number
@@ -31,7 +33,7 @@ export default function WordChart({ generalCount, reviewCount }: Props) {
       <div className={styles.btn_dashboard}>
         <p>{`Chuẩn bị ôn tập: ${reviewCount} từ`}</p>
         <Button>
-          <Link href="/review">Ôn tập ngay</Link>
+          <Link href={reviewUrl}>Ôn tập ngay</Link>
         </Button>
       </div>
     </>

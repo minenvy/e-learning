@@ -2,7 +2,7 @@ import styled from "styled-components"
 
 type Props = {
   type?: string
-  label: string
+  label?: string
   placeholder?: string
   value: string
   onChange: (e: React.ChangeEvent<HTMLInputElement>) => void
@@ -17,7 +17,7 @@ export default function Input({
 }: Props) {
   return (
     <WrapInput>
-      <Label>{label}</Label>
+      {label && <Label>{label}</Label>}
       <CustomInput
         type={type}
         placeholder={placeholder}

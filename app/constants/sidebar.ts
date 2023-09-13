@@ -1,27 +1,32 @@
 export const sidebarLinks = [
   {
     icon: "/images/general.png",
+    key: "general",
+    link: "/general",
     label: "Tổng quan",
-    value: "/general",
   },
   {
     icon: "/images/word.png",
+    key: "word",
+    link: "/word",
     label: "Từ vựng",
-    value: "/word",
   },
   {
     icon: "/images/notebook.png",
+    key: "notebook",
+    link: "/notebook/0",
     label: "Sổ tay",
-    value: "/notebook",
   },
   {
     icon: "/images/paragraph.png",
+    key: "writing",
+    link: "/writing",
     label: "Viết bài",
-    value: "/writing",
   },
   {
     icon: "/images/video.png",
+    key: "video",
+    link: "/video",
     label: "Video",
-    value: "/video",
   },
 ]

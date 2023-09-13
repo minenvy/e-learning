@@ -1,9 +1,12 @@
+import { connectToDb } from "@/app/lib/mongoose"
 import Dictionary from "@/app/mongodb/dictionary.model"
 import { getAuth } from "@clerk/nextjs/server"
 import { NextRequest, NextResponse } from "next/server"
 
 export async function POST(req: NextRequest) {
   const { userId } = getAuth(req)
+
+  await connectToDb()
 
   const { topic, count } = await req.json()
 

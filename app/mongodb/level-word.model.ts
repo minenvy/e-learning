@@ -1,4 +1,4 @@
-import mongoose, { Schema } from "mongoose"
+import mongoose from "mongoose"
 
 const levelWordSchema = new mongoose.Schema({
   userId: {
@@ -6,8 +6,8 @@ const levelWordSchema = new mongoose.Schema({
     required: true,
   },
   word: {
-    type: Schema.Types.ObjectId,
-    ref: "word",
+    type: mongoose.Schema.ObjectId,
+    ref: "Word",
     required: true,
   },
   level: {
@@ -25,6 +25,6 @@ const levelWordSchema = new mongoose.Schema({
 })
 
 const LevelWord =
-  mongoose.models["level word"] || mongoose.model("level word", levelWordSchema)
+  mongoose.models["LevelWord"] || mongoose.model("LevelWord", levelWordSchema)
 
 export default LevelWord
