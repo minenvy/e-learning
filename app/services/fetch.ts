@@ -22,11 +22,7 @@ export async function post(
   return res.ok
 }
 
-export async function get(
-  path: string,
-  body: Object,
-  warningMessage?: string,
-) {
+export async function get(path: string, body: Object, warningMessage?: string) {
   const res = await fetch(path, {
     method: "post",
     body: JSON.stringify(body),

@@ -31,6 +31,6 @@ async function updateToMaxLevel(userId: string, enWord: string) {
 
   const levelWord = await LevelWord.findOne({ userId, word: wordId })
   levelWord.level = maxLevel
-  
+
   await levelWord.save()
 }

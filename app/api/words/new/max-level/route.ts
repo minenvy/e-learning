@@ -25,7 +25,7 @@ export async function POST(req: NextRequest) {
 
 async function addToDb(userId: string, word: WordType) {
   await connectToDb()
-  
+
   const { enWord, type, definition, synonyms, antonyms, example, image } = word
   const newWord = new Word({
     userId,
