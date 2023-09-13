@@ -25,6 +25,6 @@ const paragraphSchema = new mongoose.Schema({
 })
 
 const Paragraph =
-  mongoose.models["paragraph"] || mongoose.model("paragraph", paragraphSchema)
+  mongoose.models["Paragraph"] || mongoose.model("Paragraph", paragraphSchema)
 
 export default Paragraph

@@ -21,3 +21,25 @@ export async function post(
 
   return res.ok
 }
+
+export async function get(
+  path: string,
+  body: Object,
+  warningMessage?: string,
+) {
+  const res = await fetch(path, {
+    method: "post",
+    body: JSON.stringify(body),
+  })
+
+  if (!res || !res.ok) {
+    message.destroy()
+    message.warning(warningMessage)
+    return null
+  } else {
+    const data = await res.json()
+    message.destroy()
+    if (data?.message) message.success(data.message)
+    return data
+  }
+}

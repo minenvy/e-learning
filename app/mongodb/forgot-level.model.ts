@@ -12,7 +12,7 @@ const forgotLevelSchema = new mongoose.Schema({
 })
 
 const ForgotLevel =
-  mongoose.models["forgot level"] ||
-  mongoose.model("forgot level", forgotLevelSchema)
+  mongoose.models["ForgotLevel"] ||
+  mongoose.model("ForgotLevel", forgotLevelSchema)
 
 export default ForgotLevel

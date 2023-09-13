@@ -8,7 +8,7 @@ import { auth } from "@clerk/nextjs"
 export default async function Word() {
   const { userId } = auth()
 
-  const countLearnedWordEachTopic = await getCountEachTopic(userId as string)
+  const countLearnedWordEachTopic = await getCountEachTopic(userId!)
 
   return (
     <FractionLayout

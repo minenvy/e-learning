@@ -7,10 +7,11 @@ import ShadowBox from "@/app/components/ui/ShadowBox"
 import WordCardProvider from "./WordCardProvider"
 import { useState } from "react"
 import Button from "@/app/components/ui/Button"
-import { Progress, Spin } from "antd"
 import WordType from "@/app/interfaces/word"
 import { addMaxLevelWords, addNewWords } from "@/app/services/new-word"
 import { updateLearnedWordCountInTopic } from "@/app/services/dictionary"
+import ProgressBar from "@/app/components/ui/ProgressBar"
+import Summary from "@/app/components/ui/Summary"
 
 const exitUrl = "/word"
 
@@ -75,12 +76,9 @@ export default function WordLearning({ words }: Props) {
     <>
       {!isSummary ? (
         <>
-          <ProgressBox>
-            <ProgressBoundary>
-              <ProgressBar style={{ width: `${progressWidth}%` }} />
-            </ProgressBoundary>
+          <ProgressBar percent={progressWidth}>
             <CloseButton onClick={exit} />
-          </ProgressBox>
+          </ProgressBar>
           <CenterBox>
             <ShadowBox>
               <WordCardProvider
@@ -95,48 +93,18 @@ export default function WordLearning({ words }: Props) {
           </CenterBox>
         </>
       ) : (
-        <CenterBox>
-          <Progress
-            type="circle"
-            percent={100}
-            format={() => `${fullInfoWords.length} từ`}
-          />
-          <div>
-            {fullInfoWords.map((word, index) => {
-              return (
-                <Word key={index}>
-                  <EnglishWord>{word.enWord}</EnglishWord>
-                  <Type>{`(${word.type})`}</Type>
-                  <Definition>{word.definition}</Definition>
-                </Word>
-              )
-            })}
-          </div>
-          <Button onClick={done}>{isLoading ? <Spin /> : "OK"}</Button>
-        </CenterBox>
+        <Summary
+          progressValue={fullInfoWords.length}
+          type="count"
+          isProcessing={isLoading}
+          onOk={done}
+          words={fullInfoWords}
+        />
       )}
     </>
   )
 }
 
-const ProgressBox = styled.div`
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 30px;
-  margin-bottom: 30px;
-`
-const ProgressBoundary = styled.div`
-  width: 100%;
-  height: 20px;
-  border-radius: 16px;
-  background-color: #e0e0e0;
-`
-const ProgressBar = styled.div`
-  height: 20px;
-  border-radius: 16px;
-  background-color: #27ac38;
-`
 const CenterBox = styled.div`
   display: flex;
   flex-direction: column;

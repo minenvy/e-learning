@@ -21,7 +21,7 @@ const dictionarySchema = new mongoose.Schema({
 })
 
 const Dictionary =
-  mongoose.models["dictionary"] ||
-  mongoose.model("dictionary", dictionarySchema)
+  mongoose.models["Dictionary"] ||
+  mongoose.model("Dictionary", dictionarySchema)
 
 export default Dictionary

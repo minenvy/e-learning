@@ -7,7 +7,7 @@ export async function addNewWord(word: Word) {
 }
 
 export async function addMaxLevelWord(word: Word) {
-  return await post("/api/word/max-level", word)
+  return await post("/api/word/new/max-level", word)
 }
 
 export async function addNewWords(words: Word[]) {
@@ -16,5 +16,5 @@ export async function addNewWords(words: Word[]) {
 }
 
 export async function addMaxLevelWords(words: Word[]) {
-  return await post("/api/words/max-level", words)
+  return await post("/api/words/new/max-level", words)
 }

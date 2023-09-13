@@ -12,8 +12,8 @@ import { auth } from "@clerk/nextjs"
 export default async function General() {
   const { userId } = auth()
 
-  const numberOfWords = await getCountWordForAllLevel(userId as string)
-  const reviewCount = await countReviewWord(userId as string)
+  const numberOfWords = await getCountWordForAllLevel(userId!)
+  const reviewCount = await countReviewWord(userId!)
 
   return (
     <FractionLayout

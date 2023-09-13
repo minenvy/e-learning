@@ -20,6 +20,6 @@ const streakSchema = new mongoose.Schema({
 })
 
 const Streak =
-  mongoose.models["streak"] || mongoose.model("streak", streakSchema)
+  mongoose.models["Streak"] || mongoose.model("Streak", streakSchema)
 
 export default Streak
