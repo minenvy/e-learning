@@ -14,6 +14,7 @@ import {
   updateLevel,
   updateToMaxLevel,
 } from "@/app/services/update-word"
+import { updateStreak } from "@/app/services/streak"
 
 const exitUrl = "/general"
 
@@ -63,6 +64,7 @@ export default function WordReview({ words }: Props) {
     await updateToMaxLevel(maxLevelWord.map((word) => word.enWord))
     await updateForgotLevel(forgotWord.map((word) => word.enWord))
     await updateLevel(passWord.map((word) => word.enWord))
+    await updateStreak()
 
     setIsLoading(false)
     exit()

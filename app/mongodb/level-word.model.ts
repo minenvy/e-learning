@@ -6,7 +6,7 @@ const levelWordSchema = new mongoose.Schema({
     required: true,
   },
   word: {
-    type: mongoose.Schema.ObjectId,
+    type: mongoose.Schema.Types.ObjectId,
     ref: "Word",
     required: true,
   },
@@ -25,6 +25,6 @@ const levelWordSchema = new mongoose.Schema({
 })
 
 const LevelWord =
-  mongoose.models["LevelWord"] || mongoose.model("LevelWord", levelWordSchema)
+  mongoose.models?.LevelWord || mongoose.model("LevelWord", levelWordSchema)
 
 export default LevelWord

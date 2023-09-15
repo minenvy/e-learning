@@ -9,5 +9,12 @@ export default function CountLearnedWord({ count }: Props) {
   const title = "Sổ tay"
   const description = `Bạn đã học ${count} từ`
 
-  return <MediumBox icon={icon} title={title} description={description} />
+  return (
+    <MediumBox
+      icon={icon}
+      title={title}
+      description={description}
+      color="#F8BBD0"
+    />
+  )
 }

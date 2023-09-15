@@ -74,6 +74,7 @@ const Wrapper = styled.div`
   align-items: center;
   justify-content: center;
   gap: 24px;
+  margin-bottom: 20px;
 `
 const InputBox = styled.div`
   display: flex;

@@ -9,5 +9,12 @@ export default function NowStreak({ count }: Props) {
   const title = "Streak hiện tại"
   const description = `Bạn đang học liên tiếp ${count} ngày`
 
-  return <MediumBox icon={icon} title={title} description={description} />
+  return (
+    <MediumBox
+      icon={icon}
+      title={title}
+      description={description}
+      color="#FFE0B2"
+    />
+  )
 }

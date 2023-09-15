@@ -1,19 +1,23 @@
 "use client"
 
 import topics from "@/app/data/topic.json"
-import { Collapse } from "antd"
+import { Collapse, message } from "antd"
 import { CaretRightOutlined } from "@ant-design/icons"
 import { textToLink } from "@/app/lib/utils/text-to-link"
 import { styled } from "styled-components"
 import SubList from "./SubList"
 import Link from "next/link"
 import Dictionary from "@/app/interfaces/dictionary"
+import { useEffect } from "react"
 
+const maxNewWord = 50
 const basicWordText = "3000 basic words"
 const basicWordCount = 3000
 const basicWordType = "3000-words"
 const basicWordLearnPageUrl = "/word/learn/3000-words/"
 const wordUrl = "/word"
+const generalUrl = "/general"
+const warningMessage = "Bạn có nhiều từ mới. Hãy ôn tập trước khi học thêm từ"
 const panelStyle: React.CSSProperties = {
   marginBottom: 24,
   background: "#f2f2f2",
@@ -23,12 +27,21 @@ const panelStyle: React.CSSProperties = {
 
 type Props = {
   countLearnedWordEachTopic: Dictionary
+  reviewCount: number
 }
 
-export default function Topic({ countLearnedWordEachTopic }: Props) {
+export default function Topic({
+  countLearnedWordEachTopic,
+  reviewCount,
+}: Props) {
+  const hasToReviewNow = reviewCount >= maxNewWord
   const basicWordLearnedCount =
     countLearnedWordEachTopic.find((topic) => topic.type === basicWordType)
       ?.count || 0
+
+  useEffect(() => {
+    if (hasToReviewNow) message.warning(warningMessage)
+  }, [])
 
   const getItems = (panelStyle: React.CSSProperties) => {
     return topics.map(({ topic, subList }) => {
@@ -45,6 +58,7 @@ export default function Topic({ countLearnedWordEachTopic }: Props) {
         children: (
           <SubList
             subList={subList}
+            reviewCount={reviewCount}
             countLearnedWordEachTopic={countLearnedWordEachTopic}
           />
         ),
@@ -66,7 +80,9 @@ export default function Topic({ countLearnedWordEachTopic }: Props) {
       />
       <Link
         href={
-          basicWordLearnedCount < basicWordCount
+          hasToReviewNow
+            ? generalUrl
+            : basicWordLearnedCount < basicWordCount
             ? `${basicWordLearnPageUrl}${basicWordLearnedCount}`
             : wordUrl
         }
