@@ -118,16 +118,3 @@ const UnderlineText = styled.span`
   text-decoration: underline;
   cursor: pointer;
 `
-const Word = styled.div`
-  display: flex;
-  gap: 16px;
-`
-const EnglishWord = styled.p`
-  flex: 2;
-`
-const Type = styled.p`
-  flex: 1;
-`
-const Definition = styled.p`
-  flex: 3;
-`

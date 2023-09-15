@@ -1,12 +1,15 @@
 "use client"
 
 import LearningWord from "@/app/interfaces/learning-word"
-import { getWordInfo } from "@/app/services/learning-word"
-import { Spin } from "antd"
+import {
+  getWordInfoFromOtherApi,
+  getWordInfoFromServerApi,
+} from "@/app/services/learning-word"
 import { useEffect, useState } from "react"
 import { styled } from "styled-components"
 import WordCard from "./WordCard"
 import Word from "@/app/interfaces/word"
+import Loading from "@/app/components/shared/Loading"
 
 type Props = {
   word: string
@@ -21,15 +24,17 @@ export default function WordCardProvider({ word, addInfoWord }: Props) {
   }, [word])
 
   const fetchData = async () => {
-    const fullWord = await getWordInfo(word)
-    setLearningWord(fullWord)
-    if (fullWord && addInfoWord) addInfoWord(fullWord)
+    const firstFullWord = await getWordInfoFromOtherApi(word)
+    const secondFullWord = await getWordInfoFromServerApi(word)
+    const thisWord = { ...secondFullWord, ...firstFullWord }
+    setLearningWord(thisWord)
+    if (thisWord && addInfoWord) addInfoWord(thisWord)
   }
 
   if (learningWord === undefined)
     return (
       <Wrapper>
-        <Spin />
+        <Loading />
       </Wrapper>
     )
   if (learningWord === null)

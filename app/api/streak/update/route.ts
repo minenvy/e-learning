@@ -8,12 +8,12 @@ export async function POST(req: NextRequest) {
 
   await connectToDb()
 
-  const streak = await Streak.findOne({userId})
+  const streak = await Streak.findOne({ userId })
   streak.isLearnedToday = true
 
   await streak.save()
 
   return NextResponse.json({
-    message: 'Cập nhật thành công'
+    message: "Cập nhật thành công",
   })
 }

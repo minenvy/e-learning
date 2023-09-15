@@ -48,7 +48,7 @@
   --white-gray: #f8f8f8;
 }
 
-/* @media (prefers-color-scheme: dark) {
+@media (prefers-color-scheme: dark) {
   :root {
     --foreground-rgb: 255, 255, 255;
     --background-start-rgb: 0, 0, 0;
@@ -79,7 +79,7 @@
     --card-rgb: 100, 100, 100;
     --card-border-rgb: 200, 200, 200;
   }
-} */
+}
 
 * {
   box-sizing: border-box;
@@ -146,6 +146,7 @@ input:-webkit-autofill:active {
 /* width */
 ::-webkit-scrollbar {
   width: 6px;
+  height: 6px;
 }
 
 /* Track */

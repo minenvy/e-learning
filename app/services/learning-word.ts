@@ -1,7 +1,8 @@
 import { wordApiLink } from "@/app/constants/word-api-link"
 import DictionaryWord from "@/app/interfaces/dictionary-word"
+import { get } from "./fetch"
 
-export async function getWordInfo(word: string) {
+export async function getWordInfoFromOtherApi(word: string) {
   const res = await fetch(wordApiLink + word)
   const data = await res.json()
 
@@ -20,4 +21,8 @@ export async function getWordInfo(word: string) {
     example: definition?.example || "",
     phonetic: firstWord.phonetic,
   }
+}
+
+export async function getWordInfoFromServerApi(word: string) {
+  return await get("/api/word/get-info", { word })
 }

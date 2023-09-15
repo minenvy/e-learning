@@ -1,4 +1,4 @@
-import fs, { createReadStream, createWriteStream } from "fs"
+import fs from "fs"
 import { NextRequest, NextResponse } from "next/server"
 
 const uploadFolder = "/uploads/"
@@ -17,9 +17,8 @@ export async function POST(req: NextRequest) {
   const imageName = Date.now().toString() + image.name
   const imagePath = uploadPath + imageName
 
-  const writeStream = createWriteStream(imagePath)
-  // Pipe the image data from the request to the write stream
-  createReadStream(imagePath).pipe(writeStream)
+  const buffer = Buffer.from(await image.arrayBuffer())
+  fs.writeFile(imagePath, buffer, (err) => console.log(err))
 
   return NextResponse.json({
     image: `${uploadFolder}${imageName}`,

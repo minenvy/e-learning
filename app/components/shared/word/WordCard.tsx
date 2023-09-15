@@ -48,7 +48,6 @@ export default function WordCard({ word }: Props) {
         <div onClick={speakWord}>
           <Icon src="/images/sound.svg" alt="sound" />
         </div>
-        {/* <Icon src="/images/sync.svg" alt="sync" /> */}
       </IconBoundary>
       {isFlipped ? (
         <Card>
