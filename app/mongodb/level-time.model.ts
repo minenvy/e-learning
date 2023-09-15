@@ -12,6 +12,6 @@ const levelTimeSchema = new mongoose.Schema({
 })
 
 const LevelTime =
-  mongoose.models["LevelTime"] || mongoose.model("LevelTime", levelTimeSchema)
+  mongoose.models?.LevelTime || mongoose.model("LevelTime", levelTimeSchema)
 
 export default LevelTime

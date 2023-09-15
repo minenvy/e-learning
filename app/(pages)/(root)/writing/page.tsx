@@ -1,5 +1,7 @@
 "use client"
 
+import FractionLayout from "@/app/components/shared/FractionLayout"
+import FloatAddWritingButton from "@/app/components/shared/writing/FloatAddWritingButton"
 import WritingList from "@/app/components/shared/writing/WritingList"
 import useDebounce from "@/app/hooks/use-debounce"
 import { Input } from "antd"
@@ -16,15 +18,23 @@ export default function Writing() {
 
   return (
     <main>
-      <InputBox>
-        <Input.Search
-          value={previousValue}
-          placeholder="Tìm kiếm tên bài viết..."
-          style={{ width: searchWidth }}
-          onChange={changeSearchKey}
-        />
-      </InputBox>
-      <WritingList filter={value.toString()} />
+      <FractionLayout
+        bigPart={
+          <div>
+            <InputBox>
+              <Input.Search
+                value={previousValue}
+                placeholder="Tìm kiếm tên bài viết..."
+                style={{ width: searchWidth }}
+                onChange={changeSearchKey}
+              />
+            </InputBox>
+            <WritingList filter={value.toString()} />
+          </div>
+        }
+        smallPart={<FloatAddWritingButton />}
+        ratio={16}
+      />
     </main>
   )
 }

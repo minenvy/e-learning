@@ -13,5 +13,5 @@ export default function CountFamiliarWord({ count }: Props) {
 
   if (!otherInfo) return null
 
-  return <MediumBox {...otherInfo} description={description} />
+  return <MediumBox {...otherInfo} description={description} color="#B2DFDB" />
 }

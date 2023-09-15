@@ -21,7 +21,9 @@ export async function POST(req: NextRequest) {
     userId: userId!,
   }
   if (level !== 0) filter.level = level
+  console.log(filter)
 
+  await import("@/app/mongodb/word.model")
   const levelWords = await LevelWord.find(filter).populate("word").exec()
 
   const words: WordType[] = []

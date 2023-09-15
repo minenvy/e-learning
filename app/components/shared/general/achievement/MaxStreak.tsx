@@ -9,5 +9,12 @@ export default function MaxStreak({ count }: Props) {
   const title = "Streak dài nhất"
   const description = `Bạn đã học liên tiếp ${count} ngày`
 
-  return <MediumBox icon={icon} title={title} description={description} />
+  return (
+    <MediumBox
+      icon={icon}
+      title={title}
+      description={description}
+      color="#E1BEE7"
+    />
+  )
 }

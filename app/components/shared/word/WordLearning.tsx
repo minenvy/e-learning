@@ -12,6 +12,7 @@ import { addMaxLevelWords, addNewWords } from "@/app/services/new-word"
 import { updateLearnedWordCountInTopic } from "@/app/services/dictionary"
 import ProgressBar from "@/app/components/ui/ProgressBar"
 import Summary from "@/app/components/ui/Summary"
+import { updateStreak } from "@/app/services/streak"
 
 const exitUrl = "/word"
 
@@ -67,6 +68,7 @@ export default function WordLearning({ words }: Props) {
       topic as string,
       Number(learnedCount) + words.length,
     )
+    await updateStreak()
 
     setIsLoading(false)
     exit()

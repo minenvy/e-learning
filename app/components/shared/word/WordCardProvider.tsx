@@ -10,7 +10,7 @@ import Word from "@/app/interfaces/word"
 
 type Props = {
   word: string
-  addInfoWord: (word: Word) => void
+  addInfoWord?: (word: Word) => void
 }
 
 export default function WordCardProvider({ word, addInfoWord }: Props) {
@@ -23,7 +23,7 @@ export default function WordCardProvider({ word, addInfoWord }: Props) {
   const fetchData = async () => {
     const fullWord = await getWordInfo(word)
     setLearningWord(fullWord)
-    if (fullWord) addInfoWord(fullWord)
+    if (fullWord && addInfoWord) addInfoWord(fullWord)
   }
 
   if (learningWord === undefined)

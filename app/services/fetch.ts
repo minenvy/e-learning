@@ -2,7 +2,7 @@ import { message } from "antd"
 
 export async function post(
   path: string,
-  body: Object,
+  body?: Object,
   warningMessage?: string,
 ) {
   const res = await fetch(path, {

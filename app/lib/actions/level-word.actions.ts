@@ -74,6 +74,7 @@ export async function countReviewWord(userId: string) {
 export async function getAllNeedReviewWord(userId: string) {
   await connectToDb()
 
+  await import("@/app/mongodb/word.model")
   const allLevelWord = (await LevelWord.find({ userId })
     .populate("word")
     .exec()) as LevelWordType[]

@@ -1,6 +1,7 @@
 "use client"
 
 import { useEffect, useRef, useState } from "react"
+import { styled } from "styled-components"
 
 type Props = {
   dataLength: number
@@ -39,10 +40,14 @@ export default function InfiniteScroll({
   }, [observerTarget, hasMore, dataLength])
 
   return (
-    <div>
+    <Wrapper>
       {children}
       {isLoading && loader}
       <div ref={observerTarget}></div>
-    </div>
+    </Wrapper>
   )
 }
+
+const Wrapper = styled.div`
+  width: 100%;
+`

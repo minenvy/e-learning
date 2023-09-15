@@ -10,6 +10,8 @@ import Dictionary from "@/app/interfaces/dictionary"
 import dictionary from "@/app/data/dictionary.json"
 
 const wordUrl = "/word"
+const generalUrl = "/general"
+const maxNewWord = 50
 const panelStyle: React.CSSProperties = {
   backgroundColor: "#f2f2f2",
   border: "none",
@@ -17,10 +19,17 @@ const panelStyle: React.CSSProperties = {
 
 type Props = {
   subList: string[]
+  reviewCount: number
   countLearnedWordEachTopic: Dictionary
 }
 
-export default function SubList({ subList, countLearnedWordEachTopic }: Props) {
+export default function SubList({
+  subList,
+  countLearnedWordEachTopic,
+  reviewCount,
+}: Props) {
+  const hasToReviewNow = reviewCount >= maxNewWord
+
   const getItems = (panelStyle: React.CSSProperties) => {
     return subList.map((subTitle) => {
       const childTopic = getSubListFromTitle(subTitle)
@@ -41,7 +50,11 @@ export default function SubList({ subList, countLearnedWordEachTopic }: Props) {
               return (
                 <StyledLink
                   href={
-                    count < maxCount ? `/word/learn/${link}/${count}` : wordUrl
+                    hasToReviewNow
+                      ? generalUrl
+                      : count < maxCount
+                      ? `/word/learn/${link}/${count}`
+                      : wordUrl
                   }
                   key={subListTitle}
                 >

@@ -7,6 +7,7 @@ import CenterAlignBox from "@/app/components/ui/CenterAlignBox"
 import Form from "@/app/components/ui/Form"
 import Input from "@/app/components/ui/Input"
 import { addNewWord } from "@/app/services/new-word"
+import { updateStreak } from "@/app/services/streak"
 import { uploadImage } from "@/app/services/upload"
 import { useRouter } from "next/navigation"
 import { useState } from "react"
@@ -57,6 +58,7 @@ export default function Page() {
       example,
       image: imageLink,
     })
+    await updateStreak()
 
     if (res) exit()
   }
