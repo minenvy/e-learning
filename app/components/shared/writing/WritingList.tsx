@@ -9,7 +9,6 @@ import styled from "styled-components"
 import InfiniteScroll from "@/app/components/shared/InfiniteScroll"
 import { deleteWriting, getWritings } from "@/app/services/writing"
 import Loading from "@/app/components/shared/Loading"
-import Link from "next/link"
 import MoreOutlinedButton from "@/app/components/shared/writing/MoreOutlinedButton"
 
 const searchWidth = 300

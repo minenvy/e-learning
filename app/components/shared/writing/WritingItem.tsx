@@ -72,15 +72,16 @@ export default function WritingItem({ writing }: Props) {
       title,
       content: JSON.stringify(convertToRaw(editorState.getCurrentContent())),
     }
+    let res: boolean = false
     if (writing) {
       writingDb.id = writing?.id
-      await updateWriting(writingDb)
+      res = await updateWriting(writingDb)
     } else {
-      await addWriting(writingDb)
+      res = await addWriting(writingDb)
     }
 
     setIsLoading(false)
-    exit()
+    if (res) exit()
   }
 
   return (

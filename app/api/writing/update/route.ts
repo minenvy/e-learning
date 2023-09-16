@@ -10,7 +10,7 @@ export async function POST(req: NextRequest) {
   await connectToDb()
 
   const writing = await Paragraph.findById(id)
-  
+
   writing.image = image
   writing.title = title
   writing.content = content

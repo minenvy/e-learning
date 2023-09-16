@@ -10,11 +10,11 @@ export async function getWriting(id: string) {
 }
 
 export async function addWriting(writing: Paragraph) {
-  await post("/api/writing/new", { ...writing })
+  return await post("/api/writing/new", { ...writing })
 }
 
 export async function updateWriting(writing: Paragraph) {
-  await post("/api/writing/update", { ...writing })
+  return await post("/api/writing/update", { ...writing })
 }
 
 export async function deleteWriting(id: string) {
