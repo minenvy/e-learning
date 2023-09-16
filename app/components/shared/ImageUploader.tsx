@@ -50,6 +50,7 @@ const Wrapper = styled.div`
   justify-content: center;
   border: 1px solid #ddd;
   border-radius: 4px;
+  overflow: hidden;
   cursor: pointer;
 `
 const Image = styled.img`

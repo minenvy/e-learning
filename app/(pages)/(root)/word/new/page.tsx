@@ -67,7 +67,9 @@ export default function Page() {
     <CenterAlignBox>
       <MarginBoundary>
         <Form>
-          <CloseButton onClick={exit} />
+          <CloseBoundary>
+            <CloseButton onClick={exit} />
+          </CloseBoundary>
           <ImageUploaderBoundary>
             <ImageUploader image={image} changeImage={changeImage} />
           </ImageUploaderBoundary>
@@ -124,6 +126,9 @@ export default function Page() {
   )
 }
 
+const CloseBoundary = styled.div`
+  height: 30px;
+`
 const ImageUploaderBoundary = styled.div`
   display: flex;
   align-items: center;

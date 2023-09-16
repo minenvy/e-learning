@@ -1,4 +1,4 @@
-import Loading from "@/app/components/shared/Loading"
+import Loading from "@/app/components/shared/LoadingPage"
 
 export default function Load() {
   return <Loading />

@@ -17,7 +17,10 @@ export default async function getYoutubeTranscript(
   videoId: string,
   config?: TranscriptConfig,
 ) {
-  const data = (await fetchTranscript(videoId, config)) as TranscriptResponse[]
+  const data = (await fetchTranscript(
+    videoId,
+    (config = { lang: "en" }),
+  )) as TranscriptResponse[]
 
   let transcript = ""
 
@@ -182,5 +185,5 @@ function ignoreText(text: string) {
 }
 
 function formatTranscript(text: string) {
-  return text.replaceAll("\n", "")
+  return text.replaceAll("\n", " ")
 }

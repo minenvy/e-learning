@@ -3,14 +3,16 @@
 import CenterAlignBox from "@/app/components/ui/CenterAlignBox"
 import Word from "@/app/components/shared/notebook/Word"
 import styled from "styled-components"
-import { Input, Spin } from "antd"
+import { Input } from "antd"
 import useDebounce from "@/app/hooks/use-debounce"
 import WordType from "@/app/interfaces/word"
 import { useEffect, useState } from "react"
 import { getWordForNoteBook } from "@/app/services/notebook"
 import InfiniteScroll from "@/app/components/shared/InfiniteScroll"
+import Loading from "@/app/components/shared/Loading"
 
 const searchWidth = 300
+const maxNumberOfWordEachGet = 10
 
 type Props = {
   level: string
@@ -31,7 +33,7 @@ export default function WordList({ level }: Props) {
   }
   const next = async (skip: number) => {
     const data = await getWordForNoteBook(Number(level), value as string, skip)
-    if (!data || data.length === 0) {
+    if (!data || data.length === 0 || data.length < maxNumberOfWordEachGet) {
       setHasMoreWord(false)
     }
     if (data && data.length > 0) {
@@ -54,7 +56,7 @@ export default function WordList({ level }: Props) {
         <InfiniteScroll
           dataLength={words.length}
           next={next}
-          loader={<Spin />}
+          loader={<Loading />}
           hasMore={hasMoreWord}
         >
           <WordBoundary>
