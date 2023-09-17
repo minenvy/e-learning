@@ -14,7 +14,7 @@ export async function POST(req: NextRequest) {
 
   const videos = await Video.find({ userId })
   const data = videos
-    .filter((video) => video.title.includes(query))
+    .filter((video) => video.title.toLowerCase().includes(query.toLowerCase()))
     .slice(skip, skip + maxNumberOfVideoEachGet)
     .map((video) => {
       return {

@@ -14,7 +14,9 @@ export async function POST(req: NextRequest) {
 
   const writings = await Paragraph.find({ userId })
   const data = writings
-    .filter((writing) => writing.title.includes(query))
+    .filter((writing) =>
+      writing.title.toLowerCase().includes(query.toLowerCase()),
+    )
     .slice(skip, skip + maxNumberOfWritingEachGet)
     .map((writing) => {
       return {

@@ -5,6 +5,7 @@
   "scripts": {
     "next-dev": "next dev",
     "express-dev": "nodemon server.js",
+    "express": "node server.js",
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
