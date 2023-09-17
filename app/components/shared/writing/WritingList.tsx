@@ -52,33 +52,35 @@ export default function WritingList() {
           onChange={changeSearchKey}
         />
       </InputBox>
-      <InfiniteScroll
-        dataLength={writings.length}
-        hasMore={hasMore}
-        loader={<Loading />}
-        next={next}
-      >
-        {writings.map((writing) => {
-          return (
-            <Card
-              key={writing.id}
-              {...writing}
-              description={
-                writing?.createdAt
-                  ? new Date(writing.createdAt).toDateString()
-                  : ""
-              }
-              link={`${detailUrl}${writing.id!}`}
-              more={
-                <MoreOutlinedButton
-                  items={[{ key: 0, label: "Delete" }]}
-                  onClicks={[() => deleteWritingInList(writing.id!)]}
-                />
-              }
-            />
-          )
-        })}
-      </InfiniteScroll>
+      <MarginBoundary>
+        <InfiniteScroll
+          dataLength={writings.length}
+          hasMore={hasMore}
+          loader={<Loading />}
+          next={next}
+        >
+          {writings.map((writing) => {
+            return (
+              <Card
+                key={writing.id}
+                {...writing}
+                description={
+                  writing?.createdAt
+                    ? new Date(writing.createdAt).toDateString()
+                    : ""
+                }
+                link={`${detailUrl}${writing.id!}`}
+                more={
+                  <MoreOutlinedButton
+                    items={[{ key: 0, label: "Delete" }]}
+                    onClicks={[() => deleteWritingInList(writing.id!)]}
+                  />
+                }
+              />
+            )
+          })}
+        </InfiniteScroll>
+      </MarginBoundary>
     </Wrapper>
   )
 }
@@ -87,6 +89,8 @@ const Wrapper = styled.div`
   width: 100%;
   height: 100%;
   padding: 16px;
+`
+const MarginBoundary = styled.div`
   margin: 20px 0;
 `
 const InputBox = styled.div`

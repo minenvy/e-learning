@@ -53,35 +53,39 @@ export default function VideoList() {
           onChange={changeSearchKey}
         />
       </InputBox>
-      <InfiniteScroll
-        dataLength={videos.length}
-        hasMore={hasMore}
-        loader={<Loading />}
-        next={next}
-      >
-        {videos.map((video) => {
-          return (
-            <Card
-              key={video.id}
-              image={videoThumbnailLink.replace(
-                "videoId",
-                video.youtubeVideoId,
-              )}
-              {...video}
-              description={
-                video?.createdAt ? new Date(video.createdAt).toDateString() : ""
-              }
-              link={`${detailUrl}${video.youtubeVideoId}`}
-              more={
-                <MoreOutlinedButton
-                  items={[{ key: 0, label: "Delete" }]}
-                  onClicks={[() => deleteVideoInList(video.id!)]}
-                />
-              }
-            />
-          )
-        })}
-      </InfiniteScroll>
+      <MarginBoundary>
+        <InfiniteScroll
+          dataLength={videos.length}
+          hasMore={hasMore}
+          loader={<Loading />}
+          next={next}
+        >
+          {videos.map((video) => {
+            return (
+              <Card
+                key={video.id}
+                image={videoThumbnailLink.replace(
+                  "videoId",
+                  video.youtubeVideoId,
+                )}
+                {...video}
+                description={
+                  video?.createdAt
+                    ? new Date(video.createdAt).toDateString()
+                    : ""
+                }
+                link={`${detailUrl}${video.youtubeVideoId}`}
+                more={
+                  <MoreOutlinedButton
+                    items={[{ key: 0, label: "Delete" }]}
+                    onClicks={[() => deleteVideoInList(video.id!)]}
+                  />
+                }
+              />
+            )
+          })}
+        </InfiniteScroll>
+      </MarginBoundary>
     </Wrapper>
   )
 }
@@ -90,6 +94,9 @@ const Wrapper = styled.div`
   width: 100%;
   height: 100%;
   padding: 16px;
+  margin: 20px 0;
+`
+const MarginBoundary = styled.div`
   margin: 20px 0;
 `
 const InputBox = styled.div`
